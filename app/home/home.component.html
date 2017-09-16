@@ -1,13 +1,15 @@
 <!--导航条部分-->
-<div class="top">
+<!--<div class="top_nav">-->
+<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+  <div class="container-fluid" style="width:94%">
+
     <div class="top_container_left">
-      <a href="" class="log">
-        <img src="../assets/images/logo.png">
+      <a [routerLink]="['']" class="log">
+        <img src="../../assets/images/logo.png">
       </a>
     </div>
-
     <div class="top_container_center">
-      <a href="" class="top_index">
+      <a [routerLink]="['']" class="top_index">
         <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
         <span>首页</span>
       </a>
@@ -15,18 +17,24 @@
         <input class="top_search_text" type="text" placeholder="搜索">
         <span><img src="../assets/images/search.png" alt="" ></span>
       </div>
-      <a href="" class="top_login">登录</a>
+      <a [routerLink]="['/login']" class="top_login">登录</a>
       <span class="top_letter"><img src="../assets/images/Aa.png" alt=""></span>
     </div>
 
     <div class="top_container_right">
-      <a class="top_register">注册</a>
+      <a [routerLink]="['/register']" class="top_register">注册</a>
       <span class="top_write">
         <img src="../assets/images/write.png" alt="">
         <span>写文章</span>
       </span>
     </div>
+
+  <!--</div>-->
+
   </div>
+
+</div>
+
 
 
 <!--主体-->
@@ -37,7 +45,7 @@
     <!---内容左边部分-->
     <div class="main_left">
       <div class="body_left">
-        <a>
+        <a [routerLink]="['category']">
           <img src="../../assets/images/category-1.png" alt="">
           <span>微小说</span>
         </a>
@@ -170,6 +178,19 @@
         </div>
 
       </div>
+
+      <style>
+
+      </style>
+
+      <div class="load_more">
+        阅读更多
+      </div>
+      <div class="footer">
+        <p><span>关于简书</span> ·<span> 联系我们</span> · <span>加入我们</span> ·
+          <span>简书出版</span> ·<span> 品牌与徽标 </span>·<span> 帮助中心</span> · <span>合作伙伴</span></p>
+        ©2012-2017 上海佰集信息科技有限公司 / Tel:021-61995350 / 简书 / 沪ICP备11018329号-5 / 沪公网安备31010402002252号
+      </div>
     </div>
     <!---内容右边部分-->
 
@@ -242,66 +263,7 @@
       </div>
     </div>
     <style>
-      .recommend_all{
-        width: 100%;
-        outline: none;
-        height:34px;
-        border-radius:4px;
-        color:#787878;
-        border:1px solid #ccc;
-        background-color: #f7f7f7;
-      }
-      .recommend_content{
-        list-style: none;
-        padding:0;
-      }
-      .recommend_notice{
-        display:inline-block;
-        width:77%;
-        padding-left:5px;
-        vertical-align:top;
-      }
-      .recommend_notice p{
-        margin:5px 0 3px 0;
-        width:100%;
-      }
-      .recommend_notice p span{
-        float:right;
-      }
-      .recommend_notice small{
-        color:#969696;
-        font-size: 13px;
-      }
-      .recommend_notice img{
-        width:13px;
-        height:13px;
-        margin-right:5px;
-      }
-      .recommend_notice span{
-        color: #42c02e;
-        font-size:13px;
-      }
-      .recommend_img{
-        overflow: hidden;
-        display: inline-block;
-      }
-      .recommend_img img{
-        border-radius:50%;
-        width:48px;
-        height:48px;
-        border:1px solid #cccccc;
-      }
-      .recommend img{
-        width:100%;
-        margin-bottom:5px;
-      }
-      .recommend_menu{
-        color:#969696;
-      }
-      .recommend_menu span{
-        float: right;
-        cursor: pointer;
-      }
+
     </style>
   </div>
 </div>

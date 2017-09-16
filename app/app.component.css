@@ -1,0 +1,8 @@
+.nav-ul{
+  list-style:none;
+}
+
+.nav-ul li{
+  float: left;
+  font-size: 2rem;
+}

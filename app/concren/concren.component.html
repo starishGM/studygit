@@ -1,0 +1,209 @@
+
+<div class="top">
+  <div class="top_container_left">
+    <a href="" class="log">
+      <img src="../assets/images/logo.png">
+    </a>
+  </div>
+
+  <div class="top_container_center">
+    <a href="" class="top_index">
+      <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+      <span>首页</span>
+    </a>
+    <div class="top_search">
+      <input class="top_search_text" type="text" placeholder="搜索">
+      <span><img src="../assets/images/search.png" alt="" ></span>
+    </div>
+    <a href="" class="top_login">登录</a>
+    <span class="top_letter"><img src="../assets/images/Aa.png" alt=""></span>
+  </div>
+
+  <div class="top_container_right">
+    <a class="top_register">注册</a>
+    <span class="top_write">
+        <img src="../assets/images/write.png" alt="">
+        <span>写文章</span>
+      </span>
+  </div>
+</div>
+<style>
+  .main_left{
+    width:30%;
+    color:#333;
+    display:inline-block;
+  }
+  .concern_all{
+    padding:10px 13px;
+    border-bottom:1px solid #eeeeee;
+    color:#333;
+    font-size:14px;
+  }
+  .concern_all span{
+    cursor:pointer;
+  }
+
+  .concern_all img{
+    width:18px;
+    height:18px;
+    vertical-align:bottom;
+    margin-top:3px;
+    margin-left:5px;
+  }
+  .add_concern{
+    padding:10px 13px;
+    /*background-color:#f0f0f0;*/
+  }
+  .add_concern img {
+    width:40px;
+    height:40px;
+    vertical-align:middle;
+  }
+  .add_concern span{
+    cursor:pointer;
+    word-wrap: break-word;
+    overflow: hidden;
+    vertical-align:middle;
+    display: inline-block;
+  }
+  #concern_category{
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  #concern_category li{
+    padding:10px 13px;
+    cursor:pointer;
+    /*background-color:#f0f0f0;*/
+
+  }
+  .add_concern_img{
+    font-size:13px;
+    color: #333333;
+    font-weight:200;
+    float:right;
+  }
+
+  #concern_category li:hover {
+    background-color:#f0f0f0 ;
+  }
+
+  #concern_category li img{
+    width:40px;
+    height:40px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    vertical-align:middle;
+    margin-right:5px;
+
+  }
+  #concern_category li span{
+    word-wrap: break-word;
+    overflow: hidden;
+    vertical-align:middle;
+    display: inline-block;
+    font-weight:300;
+  }
+
+  .main_right{
+    border-left:1px solid #dddddd;
+    display:inline-block;
+    width:65%;
+    padding-left:5%;
+    right:0;
+    float:right;
+    position: absolute;
+    height:400px;
+    /*border:1px solid #ffff00;*/
+  }
+  .concern_menu{
+    list-style: none;
+    padding:0;
+    border-bottom:1px solid #ddd;
+    overflow: hidden;
+  }
+  .concern_menu li {
+    cursor:pointer;
+    display:inline-block;
+    /*border:1px solid #8c8c8c;*/
+    padding:13px 20px;
+    font-size:15px;
+    /*color:#969696;*/
+    color:#646464;
+    float:left;
+    margin-right:1px;
+  }
+  .concern_menu li:first-child{
+    border-bottom:2px solid #555555;
+  }
+  .concern_menu li:hover{
+    border-bottom:2px solid #555555;
+  }
+  .concern_menu li img{
+    width:18px;
+    height:18px;
+    vertical-align: bottom;
+  }
+</style>
+<div class="main">
+    <div class="main_left">
+
+      <div class="concern_all">
+        <span>
+          全部关注<span><img src="../../assets/images/1001.png" alt=""></span>
+        </span>
+        <span>
+          <span class="add_concern_img"><img src="../../assets/images/1007.png" alt="">添加关注</span>
+        </span>
+      </div>
+
+      <div class="add_concern">
+        <img src="../../assets/images/1005.png"/>
+        <span>
+          添加关注
+        </span>
+      </div>
+      <ul id="concern_category">
+        <li>
+          <img src="../../assets/images/1006.jpg"/>
+          <span>
+          青春
+        </span>
+        </li>
+        <li>
+              <img src="../../assets/images/1006.jpg"/>
+              <span>
+              青春
+              </span>
+        </li>
+        <li>
+              <img src="../../assets/images/1006.jpg"/>
+              <span>
+              青春
+              </span>
+        </li>
+        <li>
+              <img src="../../assets/images/1006.jpg"/>
+              <span>
+              青春
+              </span>
+        </li>
+      </ul>
+
+    </div>
+    <div class="main_right">
+      <ul class="concern_menu">
+        <li>
+          <b>全部推荐</b>
+        </li>
+        <li>
+          <img src="../../assets/images/1003.png" alt="">
+          <b>推荐作者</b>
+        </li>
+        <li>
+          <img src="../../assets/images/1002.png" alt="">
+          <b>推荐专题</b>
+        </li>
+      </ul>
+    </div>
+</div>
