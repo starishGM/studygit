@@ -1,0 +1,213 @@
+<!--<div class="container">
+  <nav class="nav">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+      </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
+    </nav>
+  </nav>-->
+
+
+<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+  <div class="container-fluid" style="width:94%">
+
+    <div class="top_container_left">
+      <a [routerLink]="['']" class="log">
+        <img src="../../assets/images/logo.png">
+      </a>
+    </div>
+    <div class="top_container_center">
+      <a [routerLink]="['']" class="top_index">
+        <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+        <span>首页</span>
+      </a>
+      <div class="top_search">
+        <input class="top_search_text" type="text" placeholder="搜索">
+        <span><img src="../assets/images/search.png" alt="" ></span>
+      </div>
+      <a [routerLink]="['/login']" class="top_login">登录</a>
+      <span class="top_letter"><img src="../assets/images/Aa.png" alt=""></span>
+    </div>
+
+    <div class="top_container_right">
+      <a [routerLink]="['/register']" class="top_register">注册</a>
+      <span class="top_write">
+        <img src="../assets/images/write.png" alt="">
+        <span>写文章</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row" style="margin-top:80px;">
+    <div class="aside col-xs-12 col-sm-3 col-sm-offset-1">
+      <ul class="setting-icon">
+        <li (click)="settingShow('base')" >
+          <img src="../../assets/images/basic.png" alt="">
+          <span>基础设置</span>
+        </li>
+        <li (click)="settingShow('personal')" >
+          <img src="../../assets/images/info.png" alt="">
+          <span>个人资料</span>
+        </li>
+        <li (click)="settingShow('user')">
+          <img src="../../assets/images/set.png" alt="">
+          <span>账号管理</span>
+        </li>
+      </ul>
+    </div>
+    <div class="main col-xs-12 col-sm-8 col-sm-offset-1">
+      <div *ngIf="baseSetting">
+        <table>
+          <tbody class="base">
+          <tr>
+            <td class="top-line">
+              <div class="avatar">
+                <img src="//upload.jianshu.io/users/upload_avatars/7552504/f422e389-ff59-4f2b-bcf0-fa218700d4a3?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/300">
+              </div>
+            </td>
+            <td class="top-line">
+              <a class="btn btn-hollow">
+                <input type="file" class="hide">更改头像
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">昵称</td>
+            <td>
+              <input type="text" class="text1" placeholder="请输入昵称">
+            </td>
+          </tr>
+          <tr>
+            <td class="title">电子邮件</td>
+            <td>
+              <form>
+                <input type="button" value="发送" class="btn btn-hollow pull-right">
+                <input type="email" placeholder="请输入你的常用邮箱" class="email">
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">手机</td>
+            <td><input type="submit" class="btn btn-hollow" value="绑定手机"></td>
+          </tr>
+          </tbody>
+        </table>
+        <input type="submit" class="btn btn-save" value="保存">
+      </div>
+      <div *ngIf="personalSetting">
+        <table>
+          <tbody class="information">
+            <tr>
+              <td class="top-line title verticle">性别</td>
+              <td class="top-line">
+                <input type="radio" value="1">
+                <span>男</span>
+                <input type="radio" value="2">
+                <span>女</span>
+                <input type="radio" value="0">
+                <span>保密</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="title pull-left">个人简介</td>
+              <td>
+                <form>
+                  <textarea placeholder="填写你的个人简介"></textarea>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td class="title pull-left setting-input">个人网站</td>
+              <td>
+                <form>
+                  <input type="text" name="website" placeholder="http://你的网址">
+                  <p class="pull-right">填写后会在个人主页显示图标</p>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td class="title">微信二维码</td>
+              <td class="weixin-qrcode">
+                <a class="btn btn-hollow">
+                  <input type="file" class="hide">更改图片
+                </a>
+                <p class="pull-right">上传后会在个人主页显示图标</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <input type="submit" class="btn btn-save" value="保存">
+      </div>
+      <div *ngIf="userSetting">
+        <table>
+          <tbody class="account">
+          <tr>
+            <td class="title top-line">打包下载文章</td>
+            <td class="top-line">
+              <a class="btn btn-hollow">
+                <input type="file" class="hide">下载所有文章
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">删除帐号</td>
+            <td><a class="btn btn-delete">删除帐号</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

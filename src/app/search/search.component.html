@@ -1,0 +1,429 @@
+<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+  <div class="container-fluid" style="width:94%">
+    <div class="top_container_left">
+      <a class="log">
+        <img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png">
+      </a>
+    </div>
+    <div class="top_container_center">
+      <a  class="top_index">
+        <img src="../../assets/images/shengluehao.png" alt="">
+        <span>首页</span>
+      </a>
+      <div class="top_search">
+        <input class="top_search_text" type="text" placeholder="搜索">
+        <span><img src="../../assets/images/mulu.png" alt="" ></span>
+      </div>
+      <a  class="top_login">登录</a>
+      <span class="top_letter"><img src="../../assets/images/pinglun.png" alt=""></span>
+    </div>
+    <div class="top_container_right">
+      <a class="top_register">注册</a>
+      <span class="top_write">
+        <img src="../../assets/images/wenhao.png" alt="">
+        <span>写文章</span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="container search">
+  <div class="row">
+    <div class="aside col-md-3">
+      <div>
+        <ul class="menu">
+          <li class="active" (click)="SearchShow('article')">
+            <a>
+              <div class="setting-icon"><img src="../../assets/images/article.png" alt=""></div>
+              <span>文章</span>
+            </a>
+          </li>
+          <li (click)="SearchShow('user')">
+            <a>
+              <div class="setting-icon"><img src="../../assets/images/user.png" alt=""></div>
+              <span>用户</span>
+            </a>
+          </li>
+          <li (click)="SearchShow('thematic')">
+            <a>
+              <div class="setting-icon"><img src="../../assets/images/thematic.png" alt=""></div>
+              <span>专题</span>
+            </a>
+          </li>
+          <li (click)="SearchShow('articles')">
+            <a>
+              <div class="setting-icon"><img src="../../assets/images/articles.png" alt=""></div>
+              <span>文集</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="hot">
+        <div class="header">
+          <span>热门搜索</span>
+          <a href="#">
+            <img src="../../assets/images/change.png" alt="">
+            换一批
+          </a>
+        </div>
+        <ul class="tag">
+          <li><a href="#">程序员</a></li>
+          <li><a href="#">故事</a></li>
+          <li><a href="#">美食</a></li>
+          <li><a href="#">音乐</a></li>
+          <li><a href="#">小说</a></li>
+          <li><a href="#">考研</a></li>
+          <li><a href="#">PPT</a></li>
+          <li><a href="#">vue</a></li>
+          <li><a href="#">旅行</a></li>
+          <li><a href="#">绘画</a></li>
+
+        </ul>
+        <div></div>
+      </div>
+    </div>
+    <div class="main col-md-7 col-md-offset-1">
+      <div *ngIf="articleSearch">
+        <div class="top">
+          <div class="relevant">
+            <div class="title">相关用户</div>
+            <a href="#" class="btn">
+              查看全部<img src="../../assets/images/jiantouyou.png" alt="">
+            </a>
+            <div class="container-fluid list">
+              <div class="col-md-4">
+                <a href="#" class="avatar">
+                  <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info">
+                  <a href="#" class="name">故事</a>
+                  <div class="meta">写了 0 字・0 喜欢</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="avatar">
+                  <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info"><a href="#" class="name">故事_</a>
+                  <div class="meta">写了 0 字・0 喜欢</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="avatar">
+                  <img src="//upload.jianshu.io/users/upload_avatars/3673618/7820d91ff336.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info">
+                  <a href="#" class="name">故事故事</a>
+                  <div class="meta">写了 0 字・0 喜欢</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relevant">
+            <div class="title">相关专题</div>
+            <a href="#" class="btn">
+              查看全部<img src="../../assets/images/jiantouyou.png" alt="">
+            </a>
+            <div class="container-fluid list">
+              <div class="col-md-4">
+                <a href="#" class="avatar-collection">
+                  <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info">
+                  <a href="#" class="name">短篇小说</a>
+                  <div class="meta">47344 文章・1295126 关注</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="avatar-collection">
+                  <img src="//upload.jianshu.io/collections/images/13/IMG_3003.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info">
+                  <a href="#" class="name">旅行·在路上</a>
+                  <div class="meta">72969 文章・1251648 关注</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="#" target="_blank" class="avatar-collection">
+                  <img src="//upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+                </a>
+                <div class="info"><a href="#" class="name">摄影</a>
+                  <div class="meta">38396 文章・905766 关注</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-content">
+          <div class="sort-type">
+            <a class="active">综合排序· </a>
+            <a class="">热门文章· </a>
+            <a class="">最新发布· </a>
+            <a class="">最新评论</a>
+          </div>
+          <div class="result">871304 个结果</div>
+          <ul></ul>
+          <div></div>
+        </div>
+      </div>
+      <div *ngIf="userSearch">
+        <div class="sort-type">
+          <a class="active">综合排序</a>
+        </div>
+        <div class="result">7347 个结果</div>
+        <ul class="user-list">
+            <li>
+              <a href="#" class="avatar">
+                <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+              </a>
+              <div class="info">
+                <a href="#" class="name">故事</a>
+                <div class="meta">
+                  <span>关注 0</span>
+                  <span>粉丝 26</span>
+                  <span>文章 0</span>
+                </div>
+                <div class="meta">
+                  <span>写了 0 字，获得了 0 个喜欢</span>
+                </div>
+              </div>
+              <a class="btn btn-r btn1">
+                <img src="../../assets/images/加号.png" alt="">
+                <span>关注</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="avatar">
+                <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+              </a>
+              <div class="info">
+                <a href="#" class="name">故事_</a>
+                <div class="meta">
+                  <span>关注 0</span>
+                  <span>粉丝 6</span>
+                  <span>文章 0</span>
+                </div>
+                <div class="meta">
+                  <span>写了 0 字，获得了 0 个喜欢</span>
+                </div>
+              </div>
+              <a class="btn btn-r btn1">
+                <img src="../../assets/images/加号.png" alt="">
+                <span>关注</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="avatar">
+                <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+              </a>
+              <div class="info">
+                <a href="#" class="name">故事故事</a>
+                <div class="meta">
+                  <span>关注 0</span>
+                  <span>粉丝 35</span>
+                  <span>文章 0</span>
+                </div>
+                <div class="meta">
+                  <span>写了 0 字，获得了 0 个喜欢</span>
+                </div>
+              </div>
+              <a class="btn btn-r btn1">
+                <img src="../../assets/images/加号.png" alt="">
+                <span>关注</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="avatar">
+                <img src="//upload.jianshu.io/users/upload_avatars/2315393/426f61af8def?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+              </a>
+              <div class="info">
+                <a href="#" class="name">+故事+</a>
+                <div class="meta">
+                  <span>关注 0</span>
+                  <span>粉丝 3</span>
+                  <span>文章 0</span>
+                </div>
+                <div class="meta">
+                  <span>写了 0 字，获得了 0 个喜欢</span>
+                </div>
+              </div>
+              <a class="btn btn-r btn1">
+                <img src="../../assets/images/加号.png" alt="">
+                <span>关注</span>
+              </a>
+            </li>
+        </ul>
+        <div></div>
+      </div>
+      <div *ngIf="thematicSearch">
+        <div class="sort-type">
+          <a class="active">综合排序· </a>
+          <a class="">最近更新· </a>
+          <a class="">热门专题</a>
+        </div>
+        <div class="result">9499个结果</div>
+        <ul class="user-list">
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+            <div class="info">
+              <a href="#" class="name">短篇小说</a>
+              <div class="meta">
+                <span>收录了 47368 篇文章，1295658 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+            <div class="info">
+              <a href="#" class="name">短篇小说</a>
+              <div class="meta">
+                <span>收录了 47368 篇文章，1295658 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+            <div class="info">
+              <a href="#" class="name">短篇小说</a>
+              <div class="meta">
+                <span>收录了 47368 篇文章，1295658 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+            <div class="info">
+              <a href="#" class="name">短篇小说</a>
+              <div class="meta">
+                <span>收录了 47368 篇文章，1295658 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//upload.jianshu.io/collections/images/11/20100120161805563.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+            <div class="info">
+              <a href="#" class="name">短篇小说</a>
+              <div class="meta">
+                <span>收录了 47368 篇文章，1295658 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+        </ul>
+        <div></div>
+      </div>
+      <div *ngIf="articlesSearch">
+        <div class="sort-type">
+          <a class="active">综合排序</a>
+        </div>
+        <div class="result">6631 个结果</div>
+        <ul class="user-list">
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/avatar-notebook-default-640f7dde88592bdf6417d8ce1902636e.png">
+            </a>
+            <div class="info">
+              <a href="#" class="name">故事</a>
+              <div class="meta">
+                <span>5 篇文章，0 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/avatar-notebook-default-640f7dde88592bdf6417d8ce1902636e.png">
+            </a>
+            <div class="info">
+              <a href="#" class="name">故事</a>
+              <div class="meta">
+                <span>5 篇文章，0 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/avatar-notebook-default-640f7dde88592bdf6417d8ce1902636e.png">
+            </a>
+            <div class="info">
+              <a href="#" class="name">故事</a>
+              <div class="meta">
+                <span>5 篇文章，0 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/avatar-notebook-default-640f7dde88592bdf6417d8ce1902636e.png">
+            </a>
+            <div class="info">
+              <a href="#" class="name">故事</a>
+              <div class="meta">
+                <span>5 篇文章，0 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="avatar-collection">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/avatar-notebook-default-640f7dde88592bdf6417d8ce1902636e.png">
+            </a>
+            <div class="info">
+              <a href="#" class="name">故事</a>
+              <div class="meta">
+                <span>5 篇文章，0 人关注</span>
+              </div>
+            </div>
+            <a class="btn btn-r btn1">
+              <img src="../../assets/images/加号.png" alt="">
+              <span>关注</span>
+            </a>
+          </li>
+        </ul>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
