@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="nav">
+      <ul class="nav-ul">
+        <li class="col-lg-2 col-md-2" routerLink="/index" routerLinkActive="active">简</li>
+        <li class="col-lg-2 col-md-2" routerLink="/index" routerLinkActive="active">首页</li>
+        <li class="col-lg-2 col-md-2 col-lg-offset-3 perNav">
+          <span>per</span>
+          <ul class="drop-list">
+          <li routerLink="perindex" routerLinkActive="active">我的关注</li>
+          <li routerLink="collection" routerLinkActive="active">收藏的文章</li>
+          <li routerLink="like" routerLinkActive="active">喜欢的文章</li>
+        </ul>
+        </li>
+        <li class="col-lg-1 col-md-1 " routerLink="/register" routerLinkActive="active">写文章
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

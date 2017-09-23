@@ -1,0 +1,92 @@
+<div class="navbar navbar-default navbar-fixed-top" *ngIf="navbarHidden">
+  <div class="container-fluid" style="min-width:768px;height:58px;">
+    <div class="row">
+      <div class="col-md-2 col-xs-3" style="border:1px solid #ff2a00">
+        <a [routerLink]="['']" class="log">
+          <img src="../../assets/images/logo.png">
+        </a>
+      </div>
+      <div class="col-md-3  col-xs-3" style="border:1px solid #ff2a00;overflow: hidden;height: 58px;">
+        <a [routerLink]="['']" class="top_index" *ngIf="!hiddenNavs">
+          <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+          <span>首页</span>
+        </a>
+        <a class="top_index"  *ngIf="hiddenNavs" [routerLink]="['']">
+          <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+          <span>发现</span>
+        </a>
+        <a class="top_index"  *ngIf="hiddenNavs" [routerLink]="['concren']">
+          <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+          <span>关注</span>
+        </a>
+        <a class="top_index"  *ngIf="hiddenNavs" [routerLink]="['concren']">
+          <img src="../assets/images/nav.png" alt="" width="23px" height="23px">
+          <span>消息</span>
+        </a>
+      </div>
+      <div class="col-md-5 col-xs-3" style="border:1px solid #ff2a00">
+        <div class="top_search">
+          <input class="top_search_text" type="text" placeholder="搜索">
+          <span><img src="../assets/images/search.png" alt="" ></span>
+        </div>
+        <a [routerLink]="['/login']" class="top_login" *ngIf="!hiddenNavs">登录</a>
+        <span class="top_letter"><img src="../assets/images/Aa.png" alt=""></span>
+      </div>
+
+      <div class="col-md-2 col-xs-3" >
+        <div class="top_container_right" >
+          <a *ngIf="!hiddenNavs" [routerLink]="['/register']" class="top_register">注册</a>
+          <span class="top_header_photo" *ngIf="hiddenNavs">
+            <span style="display: inline-block;width:40px;height:40px;overflow: hidden">
+              <img src="../assets/images/1016.jpg" alt="">
+            </span>
+              <span class="sanjiao"></span>
+              <ul class="top_select">
+                  <li>
+                    <span class="top_select_img">
+                      <img src="../assets/images/1018.png" />
+                    </span>
+                      <a [routerLink]="['']">我的主页</a>
+                  </li>
+                  <li>
+                     <span class="top_select_img">
+                      <img src="../assets/images/1023.png" />
+                    </span>
+                    <a [routerLink]="['']">喜欢的文章</a>
+                  </li>
+                  <li>
+                    <span class="top_select_img">
+                      <img src="../assets/images/1024.png" />
+                    </span>
+                     <a [routerLink]="['']">收藏的文章</a>
+                  </li>
+                  <li>
+                    <span class="top_select_img">
+                      <img src="../assets/images/1019.png" />
+                    </span>
+                    <a [routerLink]="['setting']">设置</a>
+                  </li>
+                  <li (click)="log_out()">
+                    <span class="top_select_img">
+                      <img src="../assets/images/1017.png" />
+                    </span>
+                    <a>退出</a>
+                  </li>
+              </ul>
+          </span>
+          <span class="top_write">
+                 <img src="../assets/images/write.png" alt="">
+                 <span>写文章</span>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger alert-dangerous" *ngIf="alertHidden">
+    <strong>显示</strong>
+    <span class="pull-right"  (click)="showAlert()">&times;</span>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+

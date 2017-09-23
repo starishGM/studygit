@@ -1,0 +1,155 @@
+/*导航*/
+.top{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1000;
+  background-color: #fff;
+  width:92%;
+  padding:0 4%;
+  border-bottom:1px solid #dddddd;
+  height:56px;
+  overflow:hidden;
+}
+.top_container_left{
+  display: inline-block;
+  width:15%;
+  float:left;
+}
+.top_container_center{
+  width:70%;
+  min-width:800px;
+  display: inline-block;
+  float:left;
+}
+.top_container_right{
+  width:15%;
+  min-width:200px;
+  display: inline-block;
+  float:left;
+  padding-top:8px;
+}
+.log{
+  display: inline-block;
+  padding:15px 0 10px 0;
+}
+.log img{
+  width:55px;
+  height:26px;
+}
+.top_index{
+  display:inline-block;
+  padding:15px 50px 10px 0;
+  text-decoration: none;
+
+}
+.top_index span{
+  color:#ff2a00;
+  vertical-align:top;
+}
+.top_search{
+  display: inline-block;
+  width:30%;
+  background-color:#eee;
+  height:38px;
+  vertical-align: top;
+  border:0;
+  border-radius:20px;
+  text-align: center;
+  margin-top:8px;
+  margin-left:40px;
+  overflow:hidden;
+}
+.top_search input{
+  padding:0;
+  height:28px;
+  color:#555;
+  text-indent:8px;
+  float: left;
+  width:85%;
+  margin-left:10px;
+  margin-top:5px;
+  background-color:#eee;
+  border:0;
+  outline: none;
+}
+.top_search span{
+  margin-top:9px;
+  display:inline-block;
+  /*float:right;*/
+  margin-right:7px;
+}
+.top_search img {
+  width:20px;
+  height:20px;
+}
+.top_letter{
+  display: inline-block;
+  float:right;
+  width:60px;
+  height:54px;
+  text-align: center;
+  line-height: 54px;
+}
+.top_letter img{
+  vertical-align: middle;
+  width:24px;
+  height:24px;
+}
+.top_login{
+  display: inline-block;
+  text-decoration: none;
+  float: right;
+  width:80px;
+  height:54px;
+  text-align: center;
+  line-height: 54px;
+  color:#969696;
+}
+.top_register{
+  width:80px;
+  height:38px;
+  display: inline-block;
+  border:1px solid #ff2a00;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20px;
+  color:#ff2a00;
+}
+.top_register:hover{
+  color: #ec6149;
+  border-color: #ec6149;
+  background-color: rgba(236,97,73,.05);
+}
+.top_write{
+  width:100px;
+  height:30px;
+  padding-top:7px;
+  float: right;
+  border:1px solid #ea6f5a;
+  display: inline-block;
+  background-color: #ea6f5a;
+  text-align: center;
+  color:#ffffff;
+  border-radius:20px;
+  font-size: 0;
+}
+.top_write img{
+  height:20px;
+  width:20px;
+  vertical-align: top;
+}
+.top_write span{
+  vertical-align: top;
+  margin-left:0;
+  font-size: 16px;
+}
+/*主体*/
+.main{
+  position: relative;
+  width:64%;
+  height:auto;
+  margin:0 auto;
+  margin-top:56px;
+  padding-top:30px;
+}
