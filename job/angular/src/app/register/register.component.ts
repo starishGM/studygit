@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from "../services/login.service";
 import {Router} from "@angular/router";
+// import {GlobalPropertyService} from "../services/global-property.service"
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -158,7 +160,7 @@ export class RegisterComponent {
   constructor(
     // private glo: GlobalPropertyService
     private login:LoginService,
-    private route:Router
+    private route:Router,
   ) { }
 
   ngOnInit() {

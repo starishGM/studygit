@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-fixed-top" *ngIf="navbarHidden">
   <div class="container-fluid" style="min-width:768px;height:58px;">
     <div class="row">
-      <div class="col-md-2 col-xs-3" style="border:1px solid #ff2a00">
+      <div class="col-md-2 col-xs-3" style="border:1px solid #ff2a00;height:58px;">
         <a [routerLink]="['']" class="log">
           <img src="../../assets/images/logo.png">
         </a>
@@ -24,7 +24,7 @@
           <span>消息</span>
         </a>
       </div>
-      <div class="col-md-5 col-xs-3" style="border:1px solid #ff2a00">
+      <div class="col-md-5 col-xs-3" style="border:1px solid #ff2a00;height:58px;">
         <div class="top_search">
           <input class="top_search_text" type="text" placeholder="搜索">
           <span><img src="../assets/images/search.png" alt="" ></span>
@@ -33,7 +33,7 @@
         <span class="top_letter"><img src="../assets/images/Aa.png" alt=""></span>
       </div>
 
-      <div class="col-md-2 col-xs-3" >
+      <div class="col-md-2 col-xs-3" style="height: 58px;">
         <div class="top_container_right" >
           <a *ngIf="!hiddenNavs" [routerLink]="['/register']" class="top_register">注册</a>
           <span class="top_header_photo" *ngIf="hiddenNavs">

@@ -1,17 +1,20 @@
 import {Component, OnInit, OnDestroy,AfterContentChecked} from '@angular/core';
 import {LoginService} from "./services/login.service";
+
+import {GlobalPropertyService} from "./services/global-property.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[LoginService]
+  providers:[LoginService,GlobalPropertyService]
 })
 export class AppComponent {
   hiddenNavs: boolean;//隐藏登录状态
   navbarHidden:boolean=true;//隐藏整个导航条
   alertHidden:boolean=false;
   constructor(
-    private login:LoginService
+    private login:LoginService,
+    public global:GlobalPropertyService
   ) {}
 
   ngOnInit() {
@@ -23,6 +26,7 @@ export class AppComponent {
     this.alertHidden=false;
     console.log("导航条的值:"+Boolean(sessionStorage.getItem("token")));
     console.log("apptoken的值:"+ sessionStorage.getItem("token"));
+
 
     //记住密码登录
     if(sessionStorage.getItem("token")){

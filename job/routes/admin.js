@@ -2,15 +2,17 @@
  * Created by Administrator on 2017/9/21.
  */
 
-//用户注册，登录，信息的修改
+//用户注册，登录，信息的修改,完善
 var express=require("express");
 var router=express.Router();
 var mysql=require("mysql");
 var crypto=require("crypto");
-var jwt=require("jwt-simple");
 var DBconfig=require("../config/DBconfig.js");
 var sql=require("../module/sql.js");
 var jwt=require("jwt-simple");
+var fs=require("fs");
+var path=require("path");
+var multiparty=require("multiparty");
 //登录
     router.post("/sign_in",function(req,res){
         console.log("sign_in");
@@ -313,19 +315,29 @@ var jwt=require("jwt-simple");
         //个人信息
         if(req.params.who=='person')
         {
-            console.log("person");
+            console.log(JSON.stringify(req.body));
             //{"token":token,"sex":sex,"introduce":introduce,"weburl":weburl};
-            if(req.body.token && req.body.introduce && weburl)
+            if(req.body.token && req.body.sex && req.body.introduce && req.body.weburl)
             {
                 var token=req.body.token;
                 var introduce=req.body.introduce.trim();
                 var weburl=req.body.weburl.trim();
+                var sex=req.body.sex.trim();
+                if(sex!=1 && sex!=2 && sex!=3)
+                {
+                    responseData.status=1;//性别错误
+                    res.json(responseData);
+                    console.log("sex错误");
+                    return false;
+                }
                 //introduce 去空格，判断长度
                 introduce=introduce.replace(/[\r\n]+/g,"");
                 if(introduce.length>300)
                 {
                     responseData.status=1;//介绍内容太长
                     res.json(responseData);
+                    console.log("介绍错误");
+
                     return false;
                 }
                 var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
@@ -333,6 +345,7 @@ var jwt=require("jwt-simple");
                 {
                     responseData.status=2;//网址不匹配
                     res.json(responseData);
+                    console.log("网址错误");
                     return false;
                 }
                 var pool=mysql.createPool(DBconfig.mysql);
@@ -375,6 +388,105 @@ var jwt=require("jwt-simple");
         if(req.params.who=='user')
         {
             console.log("user");
+        }
+
+        //上传文件
+        if(req.params.who=="upfile")
+        {
+            console.log(req.headers.author);
+            var form=new multiparty.Form();
+            //console.log("目录:"+__dirname);//目录:D:\jianshu\job\routes
+            //console.log("路径:"+__filename);//路径:D:\jianshu\job\routes\admin.js
+           // form.uploadDir=path.join(__dirname,"/angular/src/assets/upfile/");
+           //  var dir=path.join(__dirname,"/angular/src/assets/upfile");
+            var dir="../angular/src/assets/upfile";
+            form.uploadDir=dir;
+            //console.log("配置的目录:"+form.uploadDir);
+            form.parse(req,function(err,filed,file){
+                if(err){
+                    //console.log("上传文件失败"+err);
+                    responseData.status=1;
+                    res.json(responseData);
+                    return false;
+                }
+                //console.log(file);
+                var tempName=file.photo[0].path.split("\\");
+                var oldName=path.join(dir,tempName[tempName.length-1]);
+                //console.log(oldName);
+                var type=oldName.split(".");
+                type=type[type.length-1].toLowerCase();
+                var size=file.photo[0].size;
+               // console.log(type);
+
+                if(type!="jpg" && type=="jpeg" && type=="png")
+                {
+                    responseData.status=2;//格式错误
+                    res.json(responseData);
+                    return false;
+                }
+
+                if(parseInt(size)>6291456)
+                {
+                   // console.log(size);
+                    responseData.status=3;
+                    res.json(responseData);
+                    return false;
+                }
+
+                var time=new Date().getTime();
+               // console.log("时间:"+time);
+                var newName=path.join(dir,time+"."+type);
+                //console.log("新名字"+newName);
+               // console.log("老名字"+oldName);
+                fs.rename(oldName,newName,function(err){
+                    if(err)
+                    {console.log(err);
+                        responseData.status=4;//重命名错错误
+                        res.json(responseData);
+                        return false;
+                    }
+                    else
+                    {
+                        //console.log("更名成功");
+                        var pool=mysql.createPool(DBconfig.mysql);
+                        pool.getConnection(function (err,conn) {
+                            if(err){console.log("数据库连接失败"+err);return false;}
+                            var token=req.headers.author;
+                            var tel=jwt.decode(token,"jianshu");
+                            conn.query(sql.selectHeader,[tel],function(err,result){
+                                if(err){console.log("查询语句出错:"+err);return false;}
+                                if(result[0].head)
+                                {
+                                    var oldHead=result[0].head;
+                                    oldHead=path.join(dir,oldHead);
+                                    //console.log(oldHead);
+
+                                    fs.unlink(oldHead,function (err) {
+                                        if(err) {console.log("删除失败:"+err);}
+                                        console.log('删除成功')}
+                                    )
+
+                                    //console.log(result[0].heade)//undefined
+                                    //console.log(Boolean(result[0].head));//false
+                                }
+                                var headPhoto=time+"."+type;
+                                console.log("要插入的图片的地址:"+headPhoto);
+                                conn.query(sql.insertHead,[headPhoto,tel],function(err,result){
+                                    if(err){console.log("查询语句出错:"+err);return false;}
+                                    if(result)
+                                    {
+                                        console.log("保存成功");
+                                        responseData.status=0;
+                                        res.json(responseData);
+                                    }
+                                    conn.release();
+                                });
+
+                            });
+                        })
+                    }
+                });
+            });
         }
 
 

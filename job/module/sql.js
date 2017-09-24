@@ -16,6 +16,8 @@ var sql={
     //完善信息
     updateInfo:"update user set nickname=?,email=? where tele=?",
     updatePersonInfo:"update user set sex=?,introduce=?,weburl=? where tele=?",
+    selectHeader:"select head from user where tele=?",
+    insertHead:"update user set head=? where tele=?"
 
 };
 module.exports=sql;

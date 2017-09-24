@@ -2,6 +2,21 @@ body{
   padding:0;
   height:0;
 }
+
+/*结果的显示*/
+
+#show_result{
+  width:50%;
+  top:58px;
+  left:25%;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
+}
+.result_close{
+  cursor: pointer;
+}
+
 /*导航开始*/
 .top_nav{
   position: fixed;
@@ -329,6 +344,7 @@ body{
     border: none;
     background-color: #42c02e;
     color: white;
+   outline:none;
 }
 .information .verticle{
   vertical-align: middle;

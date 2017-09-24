@@ -26,7 +26,6 @@ app.all('*', function(req, res, next) {
     res.header("Content-Type","text/html");
     //console.log(req.query);获取提交的参数
     //console.log(res);
-    console.log(req.url);
     if(req.method=="OPTIONS")
     {
         res.json({status:200});

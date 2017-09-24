@@ -16,7 +16,7 @@ body{
 }
 .top_header{
   overflow: hidden;
-  height:56px;
+  height:58px;
 
 }
 .top_container_left{
@@ -166,12 +166,7 @@ body{
   margin:0 auto;
 }
     /*主题左边*/
-.main_header{
-  border:1px solid #000;
-  height:40px;
-  margin-top:56px;
 
-}
 .main_body{
   height:500px;
   padding-top:40px;
@@ -301,6 +296,69 @@ body{
   color: #ec6149;
   border-color: #ec6149;
   background-color: rgba(236,97,73,.05);
+}
+
+/*轮播图*/
+.main_header{
+  border:1px solid #fff;
+  margin-top:58px;
+  font-size:0;
+  height:274px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.turn_player{
+  height:40px;
+  font-size:20px;
+  margin-top:-10%;
+  overflow:hidden;
+  position: absolute;
+  z-index: 10;
+  width:64%;
+  display:none;
+
+}
+.turn_player span{
+  display:inline-block;
+  height:40px;
+  width:50px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+  border-radius:4px;
+  cursor: pointer;
+  line-height: 40px;
+}
+#player_left{
+}
+
+#turn_left{
+  width:70%;
+  height:272px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  /*overflow:hidden;*/
+
+}
+#turn_left li img{
+  width:100%;
+  height:272px;
+}
+#turn_right{
+  width:30%;
+  height:272px;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+#turn_right li img{
+  width:100%;
+  height:136px;
 }
 
 /*主题右边  推荐和关注*/

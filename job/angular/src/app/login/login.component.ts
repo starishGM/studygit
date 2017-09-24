@@ -26,7 +26,7 @@ export class LoginComponent {
   constructor(
     private login:LoginService,
     private route:Router,
-    private global:GlobalPropertyService
+    public global:GlobalPropertyService
   ) { }
 
   checkTel(tel)
@@ -106,6 +106,7 @@ export class LoginComponent {
                }
                sessionStorage.setItem("token",data.token);
                console.log("登录成功"+sessionStorage.getItem("token"));
+
                that.route.navigate(['']);
                break;
              case "4":

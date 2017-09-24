@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from "@angular/http";
 
+import { CommonModule }     from '@angular/common';
+import { FileUploadModule } from 'ng2-file-upload';
+
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -42,6 +45,8 @@ import { ConcrenmenuComponent } from './concrenmenu/concrenmenu.component';
     ConcrenmenuComponent
   ],
   imports: [
+    FileUploadModule,
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule,
