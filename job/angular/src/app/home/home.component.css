@@ -217,6 +217,23 @@ body{
   padding:6px 9px;
   vertical-align: top;
 }
+
+/*更多专题*/
+.more_theme{
+  display: inline-block;
+  text-decoration: none;
+  margin:0 18px 18px 0;
+  padding:6px 9px;
+  height:32px;
+  font-size:15px;
+  color:#666;
+  vertical-align: top;
+  border-right:1px solid #ccc;
+}
+.more_theme a{
+  color:#666;
+  border:0;
+}
 .introduce{
   margin-top:15px;
   /*border-bottom:1px solid #f0f0f0;*/

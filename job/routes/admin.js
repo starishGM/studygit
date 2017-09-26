@@ -57,6 +57,9 @@ var multiparty=require("multiparty");
 
                         if(md==result[0].password)
                         {
+                            if(result[0].head)
+                            {responseData.head=result[0].head;}
+                            else{responseData.head="888888.jpg";}
                             conn.query(sql.updateToken,[token,telephone],function(err,result){
                                 //console.log("返回的结果:"+JSON.stringify(result));
                                 if(result){
@@ -182,6 +185,8 @@ var multiparty=require("multiparty");
                 var tel=jwt.decode(token,"jianshu");
                 //console.log("jwt解密后的tel："+tel);
                 conn.query(sql.getToken,[tel],function(err,result){
+                    if(err){console.log("查询语句出错:"+err);return false;}
+                    console.log("记住密码登录结果:"+JSON.stringify(result));
                     if(result[0])
                     {
                         //console.log("查到的token值:"+result[0].token);
@@ -190,13 +195,18 @@ var multiparty=require("multiparty");
                             //console.log("登录成功");
                             responseDate.status=0;
                             responseDate.token=token;
+                            if(result[0].head)
+                            {responseDate.head=result[0].head;}
+                            else{responseDate.head="888888.jpg";}
                         }
-                        else{console.log("token不匹配");responseDate.status=1}
+                        else{console.log("token不匹配");responseDate.status=1;}
                         res.json(responseDate);
                     }
                     else
                     {
                         console.log("没查到该号码的token");
+                        responseDate.status=1;//记住密码登录失败
+                        res.json(responseDate);
                     }
                 });
                 conn.release();

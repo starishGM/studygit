@@ -48,6 +48,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/admin",require("./routes/admin"));
 
+app.use("/home",require("./routes/home"));
+
+
 //-----------------测试专用-------------------
 app.use("/test",require("./routes/test"));
 

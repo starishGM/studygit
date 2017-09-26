@@ -65,7 +65,9 @@ function move(obj,json,fn)
 window.onload=function()
 {
   var oTurn_left=document.getElementById('turn_left');
+  console.log(oTurn_left);
   var aLeft_li=oTurn_left.getElementsByTagName("li");
+  console.log(aLeft_li);
   var oTurn_right=document.getElementById("turn_right");
   var aRight_li=oTurn_right.getElementsByTagName("li");
   var oMain_header=document.getElementById("main_header");
@@ -116,4 +118,10 @@ window.onload=function()
     turn_timer=setInterval(turn_run,4000);
     oTurn_player.style.display="none";
   }
-}
+
+  //theme.js
+  theme_js();
+
+  //搜索框的移动
+
+};

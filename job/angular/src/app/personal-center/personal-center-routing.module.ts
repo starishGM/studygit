@@ -5,12 +5,13 @@ import { MyCollectionComponent } from './my-collection/my-collection.component';
 import { MyLikeComponent } from './my-like/my-like.component';
 import { PerIndexComponent } from './per-index/per-index.component';
 import { PersonalCenterComponent } from './personal-center.component';
+import { MyBlogComponent } from './my-blog/my-blog.component';
 
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 const  PerRoute: Routes = [
   {
-    path: 'personal-center',
+    path: 'PersonalCenter',
     component: PersonalCenterComponent,
     children: [
       {
@@ -18,17 +19,19 @@ const  PerRoute: Routes = [
         component: MyCollectionComponent,
       },
       {
-        path: 'like',
+        path: 'myblog',
+        component: MyBlogComponent,
+      },
+      {
+        path: 'mylike',
         component: MyLikeComponent,
       },
       {
         path: 'perindex',
         component: PerIndexComponent,
-      },
-      {
-        path: '',
-        component: PerIndexComponent,
-      }]
+      }
+
+    ]
   }];
 @NgModule({
   imports: [RouterModule.forChild(PerRoute)],

@@ -115,34 +115,18 @@
     <!---内容左边部分-->
     <div class="main_left">
       <div class="body_left">
-        <a [routerLink]="['category']">
+<!--        <a [routerLink]="['category']">
           <img src="../../assets/images/category-1.png" alt="">
           <span>微小说</span>
+        </a>-->
+        <!--还有主题的id没填写-->
+        <a *ngFor="let x of categoryContent" [routerLink]="['category']">
+          <img src="../../assets/upfile/{{x.head}}" alt="">
+          <span>{{x.categoryname}}</span>
         </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
-        <a>
-          <img src="../../assets/images/category-1.png" alt="">
-          <span>微小说</span>
-        </a>
+        <span class="more_theme">
+          <a [routerLink]="['theme']">更多热门专题专题</a>
+        </span>
       </div>
       <div class="split-line"></div>
       <!---作者及其书籍介绍-->
@@ -188,7 +172,7 @@
             <small>09.09&nbsp;13:27</small>
           </a>
           <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
+            <a [routerLink]="['artical']" >那个荷兰男人的眼里有火</a>
           </div>
           <p class="author_content">
             这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
@@ -221,7 +205,7 @@
             <small>09.09&nbsp;13:27</small>
           </a>
           <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
+            <a [routerLink]="['artical']" >那个荷兰男人的眼里有火</a>
           </div>
           <p class="author_content">
             这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个

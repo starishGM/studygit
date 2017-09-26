@@ -105,9 +105,13 @@ export class LoginComponent {
                  console.log("login本地存储:"+localStorage.getItem("token"));
                }
                sessionStorage.setItem("token",data.token);
+               sessionStorage.setItem("head",data.head);
                console.log("登录成功"+sessionStorage.getItem("token"));
-
+               console.log(data.head);
                that.route.navigate(['']);
+
+               // 2)this.person=route.snapshot.params["person"];
+
                break;
              case "4":
                this.errPasswordShow=true;

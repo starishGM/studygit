@@ -42,6 +42,15 @@
   3:文件过大
   4.文件重名名错误
 
+获取主题目录:
+  0:代表获取成功
+  1:代表获取失败
+
+文章的保存:
+  0:保存成功
+  1:保存失败
+  6:异地登录
+
 问题:
   1）数据库断线重连
   2)有人吗  请问当ts中的变量发生改变以后如何让视图也发生变化，求解惑
@@ -55,10 +64,17 @@
   8)子组件如何传值给父组件，让父组件显示或隐藏视图
   9)数据的提交 console.log(form.value)的用法;
   10)文件上传的头:headers:[{name:"author",value:this.token}]
+  11)登录后同头像要刷新的问题。
+  12)视图切换之后再切回来需要重新请求数据吗?
+  13)category=req.body.category.trim();当req.body.category是一个数字的时候不然使用trim函数。
+  14)并不是所有的文章都可以提交，应该再加一个临时文张表共管理员审阅文章，通过之后再插入到数据库。
 记录:
-1)localStorage:存用户的token用以下次登录
-2)sessionStorage:用于判断用户的登录状态
-3)jwt生成的token密钥为jianshu
+    1)localStorage:存用户的token用以下次登录
+    2)sessionStorage:用于判断用户的登录状态
+    3)jwt生成的token密钥为jianshu
+
+请求目录文件的时候
+  1)字符串简书代表是由简书网站发起的请求
 
 流程:
 1)导航条的显示是根据sessionStorage的值来进行显示的
@@ -66,3 +82,10 @@
 
 技巧:
   服务中函数的名字不能与相应的ts文件中函数的名字一致，一致时，首先调用ts文件中的相同函数。
+
+富文本编辑器与view与组件传值。
+  1）https://github.com/fengnovo/wangEditor/blob/master/example/demo/in-ng2/src/app/editor/editor.component.ts
+
+获取当前时间:
+   var d = new Date();
+   var time = d.getFullYear() + "-" +(d.getMonth()+1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();

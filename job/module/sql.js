@@ -7,17 +7,23 @@ var sql={
     insertUser:"insert into user(nickname,tele,password,created_at,token) values(?,?,?,?,?)",
 
     //登录，退出
-    getUserInfo:"select password,token from user where tele=?",
+    getUserInfo:"select password,token,head from user where tele=?",
     updateToken:"UPDATE user set token=? where tele=?",
 
     //记住密码登录
-    getToken:"select token from user where tele=?",
+    getToken:"select token,head,userid from user where tele=?",
 
     //完善信息
     updateInfo:"update user set nickname=?,email=? where tele=?",
     updatePersonInfo:"update user set sex=?,introduce=?,weburl=? where tele=?",
     selectHeader:"select head from user where tele=?",
-    insertHead:"update user set head=? where tele=?"
+    insertHead:"update user set head=? where tele=?",
 
+    //获取文章专题
+    getArticalTheme:"select category_id,categoryname,head from category limit 0,9",
+    getArticalAllTheme:"select category_id,categoryname,head,introduce from category",
+
+    //保存文章  blog_id,title,content,user_id,created_at,category_id
+    saveArtical:"INSERT INTO blog VALUES ('null',?,?,?,?,?)",
 };
 module.exports=sql;

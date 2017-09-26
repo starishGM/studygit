@@ -1,0 +1,15 @@
+.author .head{
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.author .head img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.author .details{
+  display: inline-block;
+}

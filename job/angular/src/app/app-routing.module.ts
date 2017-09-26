@@ -15,6 +15,8 @@ import {SevenComponent} from "./seven/seven.component";
 import {ThirtyComponent} from "./thirty/thirty.component";
 import {SearchComponent} from "./search/search.component";
 import {ConcrenmenuComponent} from "./concrenmenu/concrenmenu.component";
+import {ArticleComponent} from "./article/article.component";
+import {ThemeComponent} from "./theme/theme.component";
 
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
@@ -62,6 +64,14 @@ const  appRoute: Routes = [
   {
     path:'concrenmenu',
     component:ConcrenmenuComponent
+  },
+  {
+    path:"artical",
+    component:ArticleComponent
+  },
+  {
+    path:'theme',
+    component:ThemeComponent
   },
   {
     path:'',

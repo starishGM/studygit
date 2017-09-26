@@ -107,6 +107,8 @@ export class SettingComponent implements OnInit {
                   break;
                 case "6":
                   that.showResult="注意！您的帐号在别处登录";
+                  sessionStorage.setItem("token",null);
+                  localStorage.setItem("token",null);
                   break;
                 default:
                   that.showResult="保存失败!";
@@ -193,6 +195,8 @@ export class SettingComponent implements OnInit {
                   break;
                 case "6":
                   that.showResult="注意！您的帐号在别处登录";
+                  sessionStorage.setItem("token",null);
+                  localStorage.setItem("token",null);
                   break;
                 default:
                   that.showResult="保存失败!";

@@ -15,6 +15,7 @@ import {CategaryComponent} from "./categary/categary.component";
 import { SettingComponent } from './setting/setting.component';
 import { WriteComponent } from './write/write.component';
 import {SearchComponent} from "./search/search.component";
+import {ArticleComponent} from "./article/article.component"
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import {GlobalPropertyService} from './services/global-property.service';
 import { SevenComponent } from './seven/seven.component';
 import { ThirtyComponent } from './thirty/thirty.component';
 import { ConcrenmenuComponent } from './concrenmenu/concrenmenu.component';
+import { ThemeComponent } from './theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ConcrenmenuComponent } from './concrenmenu/concrenmenu.component';
     SevenComponent,
     ThirtyComponent,
     SearchComponent,
-    ConcrenmenuComponent
+    ConcrenmenuComponent,
+    ArticleComponent,
+    ThemeComponent
   ],
   imports: [
     FileUploadModule,
