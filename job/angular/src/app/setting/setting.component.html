@@ -37,7 +37,7 @@
             </td>
             <td class="top-line">
               <a class="btn btn-hollow">
-                <input type="file" class="hide" class="hide" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)">更改头像
+                <input type="file"  class="hide" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)">更改头像
               </a>
             </td>
           </tr>
@@ -68,7 +68,7 @@
         <form #savePersonInfo>
         <table>
           <tbody class="information">
-            <tr>
+            <tr style="width:100%;">
               <td class="top-line title verticle">性别</td>
               <td class="top-line">
                 <input type="radio" name="sex" #sexRef value="1">
@@ -89,9 +89,9 @@
             </tr>
             <tr>
               <td class="title pull-left setting-input" >个人网站</td>
-              <td>
-                  <input type="text" #weburl name="weburl" style="vertical-align: text-bottom" #weburlRef placeholder="http://你的网址">
-                  <p class="pull-right">填写后会在个人主页显示图标</p>
+              <td style="vertical-align: middle">
+                  <input type="text" #weburl name="weburl" style="position: absolute;margin-top:13px;" #weburlRef placeholder="http://你的网址">
+                  <p class="pull-right" style="vertical-align: bottom">填写后会在个人主页显示图标</p>
               </td>
             </tr>
             <tr>
@@ -114,14 +114,17 @@
         <table>
           <tbody class="account">
           <tr>
-            <td class="title top-line">打包下载文章</td>
+            <td class="title top-line">
+              打包下载文章
+            </td>
             <td class="top-line">
-              <a class="btn btn-hollow" >
-                <input type="file" style="opacity:0;">
-                <span>下载所有文章</span>
+              <a class="btn btn-hollow" style="width:100px; float: left;margin-right: 50px;">
+                <!--<input type="file" style="position: absolute;top:30px; opacity: 0;">-->
+                <span style="margin-top: -30px;">下载所有文章</span>
               </a>
             </td>
           </tr>
+
           <tr>
             <form action="">
                 <td class="title">删除帐号</td>

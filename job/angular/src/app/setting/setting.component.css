@@ -296,8 +296,10 @@ body{
 .btn-hollow {
   padding: 4px 12px;
   font-size: 14px;
-  line-height: normal;
-  border-radius: 40px;
+  height:34px;
+
+  line-height:28px;
+  border-radius: 20px;
   background: none;
   border: 1px solid rgba(59,194,29,.7);
   color: #42c02e;

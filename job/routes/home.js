@@ -75,13 +75,14 @@ router.post("/uploadartical",function(req,res){
     console.log("进入到保存文章");
     var responseDate={};
     // console.log(req.body);
-    if(req.body.name=="jianshu" && req.body.token && req.body.artical && req.body.title && req.body.category)
+    if(req.body.name=="jianshu" && req.body.size && req.body.token && req.body.artical && req.body.title && req.body.category)
     {
         // console.log("a");
         var token=req.body.token;
         var title=req.body.title.trim();
         var artical=req.body.artical;
         var category=req.body.category;
+        var size=req.body.size;
         if(title.length>100)
         {
             console.log(" 标题太长");
@@ -121,7 +122,7 @@ router.post("/uploadartical",function(req,res){
                         var d = new Date();
                         var time = d.getFullYear() + "-" +(d.getMonth()+1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
                         //title,content,user_id,created_at,category_id
-                        conn.query(sql.saveArtical,[title,artical,userId,time,category],function(err,result){
+                        conn.query(sql.saveArtical,[title,artical,userId,time,category,size],function(err,result){
                                 if(err){console.log("查询语句出错:"+err);return false;}
                                 if(result)
                                 {
@@ -157,6 +158,36 @@ router.post("/uploadartical",function(req,res){
     else
     {
         res.json({"code":"内容为空"});
+    }
+});
+
+router.post("/getArticalDetail",function(req,res){
+    console.log("进入到getArticaldetail页面");
+    if(req.body.name=="jianshu")
+    {
+        var responseDate={};
+        var pool=mysql.createPool(DBconfig.mysql);
+        pool.getConnection(function(err,conn){
+            if(err){console.log("数据库连接失败:"+err);return false;}
+            conn.query(sql.getArticalDetail,function(err,result){
+                console.log("artical");
+                if(err){console.log("数据库查询语句出错:"+err); return false;}
+                if(result[0])
+                {
+                    responseDate.code=result;
+                    responseDate.status=0;
+                    //console.log(JSON.stringify(result));
+                }
+                else
+                {
+                    responseDate.status=1;
+                    console.log("没查询到数据");
+                }
+                res.json(responseDate);
+                conn.release();
+            });
+        })
+
     }
 });
 

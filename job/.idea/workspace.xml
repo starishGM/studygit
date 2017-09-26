@@ -18,8 +18,8 @@
       <file leaf-file-name="jianshu.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/jianshu.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="194">
+              <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -35,64 +35,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/sql.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#49#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+            <state relative-caret-position="2500">
+              <caret line="122" column="59" lean-forward="true" selection-start-line="122" selection-start-column="59" selection-end-line="122" selection-end-column="59" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
                 <element signature="e#311#2366#0" expanded="false" />
                 <element signature="e#553#1399#0" expanded="false" />
                 <element signature="e#1476#2357#0" expanded="false" />
-                <element signature="e#2416#5640#0" expanded="false" />
+                <element signature="e#5747#6660#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getartical.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/src/app/services/getartical.service.ts">
+      <file leaf-file-name="sql.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/sql.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="write.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/src/app/write/write.component.ts">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5160">
-              <caret line="122" column="28" lean-forward="true" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+            <state relative-caret-position="344">
+              <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular/src/app/setting/setting.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="120" column="21" lean-forward="false" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#a#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,12 +107,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/DBconfig.js" />
         <option value="$PROJECT_DIR$/config/test.js" />
         <option value="$PROJECT_DIR$/angular/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/services/login.service.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/services/global-property.service.ts" />
-        <option value="$PROJECT_DIR$/angular/src/app/setting/setting.component.css" />
         <option value="$PROJECT_DIR$/angular/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/concrenmenu/concrenmenu.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/news/news.component.html" />
@@ -149,7 +123,6 @@
         <option value="$PROJECT_DIR$/angular/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/angular/src/app/personal-center/personal-center.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/personal-center/personal-center.component.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/article/article.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/categary/categary.component.css" />
         <option value="$PROJECT_DIR$/angular/src/app/categary/categary.component.html" />
@@ -157,10 +130,8 @@
         <option value="$PROJECT_DIR$/angular/src/app/concren/concren.component.html" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/angular/src/app/home/home.component.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/angular/src/assets/javascript/home.js" />
-        <option value="$PROJECT_DIR$/angular/src/index.html" />
         <option value="$PROJECT_DIR$/angular/src/assets/javascript/theme.js" />
         <option value="$PROJECT_DIR$/angular/src/app/theme/theme.component.css" />
         <option value="$PROJECT_DIR$/angular/src/app/theme/theme.component.ts" />
@@ -168,20 +139,25 @@
         <option value="$PROJECT_DIR$/angular/src/app/write/index.ts" />
         <option value="$PROJECT_DIR$/angular/tsconfig.json" />
         <option value="$USER_HOME$/Desktop/note2/angular/angular2.txt" />
-        <option value="$PROJECT_DIR$/module/sql.js" />
         <option value="$PROJECT_DIR$/angular/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/write/write.component.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/angular/src/app/services/getartical.service.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/setting/setting.component.ts" />
-        <option value="$PROJECT_DIR$/angular/jianshu.txt" />
         <option value="$PROJECT_DIR$/angular/src/app/write/write.component.html" />
-        <option value="$PROJECT_DIR$/angular/src/app/write/write.component.ts" />
-        <option value="$PROJECT_DIR$/routes/home.js" />
-        <option value="$PROJECT_DIR$/routes/admin.js" />
         <option value="$PROJECT_DIR$/angular/src/app/register/register.component.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/setting/setting.component.css" />
+        <option value="$PROJECT_DIR$/angular/src/app/services/getartical.service.ts" />
+        <option value="$PROJECT_DIR$/routes/admin.js" />
         <option value="$PROJECT_DIR$/angular/src/app/setting/setting.component.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/filter.pipe.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/write/write.component.ts" />
+        <option value="$PROJECT_DIR$/angular/jianshu.txt" />
+        <option value="$PROJECT_DIR$/routes/home.js" />
+        <option value="$PROJECT_DIR$/module/sql.js" />
+        <option value="$PROJECT_DIR$/angular/src/index.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/home/home.component.ts" />
       </list>
     </option>
   </component>
@@ -347,33 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="setting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="job" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="job" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,15 +460,15 @@
       <workItem from="1506243638040" duration="18892000" />
       <workItem from="1506267750128" duration="5621000" />
       <workItem from="1506299623787" duration="36167000" />
-      <workItem from="1506386434262" duration="8926000" />
+      <workItem from="1506386434262" duration="22889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197945000" />
+    <option name="totallyTimeSpent" value="211908000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -529,7 +479,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24563445" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22467986" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -554,20 +504,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/src/app/start/start.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/seven/seven.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/personal-center/personal-center.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -686,6 +622,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc;n#theme_js#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -715,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-387">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -758,6 +690,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-344">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#873#1248#0" expanded="false" />
+            <element signature="e#1673#2092#0" expanded="false" />
+            <marker date="1506311613879" expanded="false" signature="1198:1213" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -795,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -810,24 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="127" column="44" lean-forward="false" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
-          <folding>
-            <element signature="e#42#1143#0" expanded="false" />
-            <element signature="e#1145#3057#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,50 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/jianshu.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/setting/setting.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="206" column="24" lean-forward="true" selection-start-line="206" selection-start-column="24" selection-end-line="206" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!block;n#settingShow#0;n#SettingComponent#0" expanded="false" />
-            <element signature="n#!!block;n#constructor#0;n#SettingComponent#0" expanded="false" />
-            <element signature="n#!!block;n#saveInfo#0;n#SettingComponent#0" expanded="false" />
-            <element signature="e#1696#1944#0" expanded="false" />
-            <element signature="e#2302#3488#0" expanded="false" />
-            <element signature="e#4401#4604#0" expanded="false" />
-            <element signature="e#4648#4850#0" expanded="false" />
-            <element signature="n#!!block;n#selectedFileOnChanged#0;n#SettingComponent#0" expanded="false" />
-            <element signature="n#!!block;n#funcHidenResult#0;n#SettingComponent#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/services/getartical.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/write/write.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -903,70 +771,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/sql.js">
+    <entry file="file://$PROJECT_DIR$/angular/src/app/register/register.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state relative-caret-position="129">
+          <caret line="138" column="13" lean-forward="true" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
           <folding>
-            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/home.js">
+    <entry file="file://$PROJECT_DIR$/angular/src/app/setting/setting.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+        <state relative-caret-position="43">
+          <caret line="300" column="16" lean-forward="false" selection-start-line="300" selection-start-column="16" selection-end-line="300" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/setting/setting.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#311#2366#0" expanded="false" />
-            <element signature="e#553#1399#0" expanded="false" />
-            <element signature="e#1476#2357#0" expanded="false" />
-            <element signature="e#2416#5640#0" expanded="false" />
+            <element signature="n#!!block;n#settingShow#0;n#SettingComponent#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#SettingComponent#0" expanded="false" />
+            <element signature="n#!!block;n#saveInfo#0;n#SettingComponent#0" expanded="false" />
+            <element signature="e#1696#1944#0" expanded="false" />
+            <element signature="e#2302#3488#0" expanded="false" />
+            <element signature="n#!!block;n#savePerson#0;n#SettingComponent#0" expanded="false" />
+            <element signature="e#4401#4604#0" expanded="false" />
+            <element signature="e#4648#4850#0" expanded="false" />
+            <element signature="n#!!block;n#selectedFileOnChanged#0;n#SettingComponent#0" expanded="false" />
+            <element signature="n#!!block;n#funcHidenResult#0;n#SettingComponent#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="170" column="57" lean-forward="true" selection-start-line="170" selection-start-column="57" selection-end-line="170" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
-            <element signature="e#439#3846#0" expanded="false" />
-            <element signature="e#7548#9591#0" expanded="false" />
-            <element signature="e#9640#10637#0" expanded="false" />
-            <element signature="e#10698#22000#0" expanded="false" />
-            <element signature="e#10848#14204#0" expanded="false" />
-            <element signature="e#14266#17488#0" expanded="false" />
-            <element signature="e#17653#21992#0" expanded="false" />
+            <element signature="e#3899#7493#0" expanded="false" />
+            <element signature="e#7547#9590#0" expanded="false" />
+            <element signature="e#9639#10636#0" expanded="false" />
+            <element signature="e#10697#21999#0" expanded="false" />
+            <element signature="e#10847#14203#0" expanded="false" />
+            <element signature="e#14265#17487#0" expanded="false" />
+            <element signature="e#17652#21991#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="138" column="13" lean-forward="true" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/write/write.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5160">
-          <caret line="122" column="28" lean-forward="true" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/setting/setting.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="120" column="21" lean-forward="false" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+        <state relative-caret-position="95">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/services/getartical.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#a#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-559">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/filter.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/write/write.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="79" column="6" lean-forward="false" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/jianshu.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="122" column="59" lean-forward="true" selection-start-line="122" selection-start-column="59" selection-end-line="122" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#311#2366#0" expanded="false" />
+            <element signature="e#553#1399#0" expanded="false" />
+            <element signature="e#1476#2357#0" expanded="false" />
+            <element signature="e#5747#6660#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1532">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <marker date="1506435268534" expanded="false" signature="795:1089" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="187" column="44" lean-forward="false" selection-start-line="187" selection-start-column="44" selection-end-line="187" selection-end-column="44" />
+          <folding>
+            <element signature="e#42#1143#0" expanded="false" />
+            <element signature="e#1145#3057#0" expanded="false" />
+            <element signature="e#5078#6115#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/sql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -17,11 +17,17 @@ export class GetArticalService{
   }
 
   //提交文章内容
-
   uploadArtical(data){
     var headers=new Headers({"Content-Type":"application/json"});
     return this.http.post(this.url+"/home/uploadartical",data,{headers:headers})
      .map(res=>res.json());
+  }
+
+  //获取文章内容
+  getArticalDetail(data){
+    var headers=new Headers({"Content-Type":"application/json"});
+    return this.http.post(this.url+"/home/getArticalDetail",data,{headers:headers})
+      .map(res=>res.json());
   }
 
 }

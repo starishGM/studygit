@@ -132,7 +132,7 @@
       <!---作者及其书籍介绍-->
       <div class="introduce">
         <!--需要渲染的部分-->
-        <div class="author">
+<!--        <div class="author">
           <a>
             <span><img src="../../assets/images/category-1.png" alt=""></span>
             <span class="author_name">达芬奇</span>
@@ -163,25 +163,26 @@
                 1233
             </a>
           </div>
-        </div>
+        </div>-->
 
-        <div class="author">
+
+
+        <div class="author" *ngFor="let x of articalDetail">
           <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
+           <!--a.blog_id as blog_id,a.head,a.userid as userid,-->
+            <span><img src="../../assets/upfile/{{x.head}}" alt=""></span>
+            <span class="author_name">{{x.nickname}}</span>
+            <small>{{x.time}}</small>
           </a>
           <div class="author_title">
-            <a [routerLink]="['artical']" >那个荷兰男人的眼里有火</a>
+            <a [routerLink]="['artical']" >{{x.title}}</a>
           </div>
           <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
+           {{x.content | filter}}
           </p>
           <div class="meta">
             <a href="" class="meta_theme">
-              生活经验
+              {{x.categoryname}}
             </a>
             <a href="">
               <img  src="../../assets/images/eye.png" alt="">
@@ -189,44 +190,11 @@
             </a>
             <a href="">
               <img src="../../assets/images/response.png" alt="">
-              43432
+              {{x.com_num}}
             </a>
             <a>
               <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
-          </div>
-        </div>
-
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a [routerLink]="['artical']" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
+              {{x.lik_num}}
             </a>
           </div>
         </div>

@@ -160,7 +160,6 @@ var multiparty=require("multiparty");
 
                         const hash = crypto.createHash('md5');
                         hash.update(password);
-
                         conn.query(sql.insertUser,[nick,tel,hash.digest('hex'),time,token],function(err,result){
                            // console.log("插入结果:"+JSON.stringify(result));//返回插入的id
                             if(result.insertId)

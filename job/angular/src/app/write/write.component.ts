@@ -76,12 +76,15 @@ export class WriteComponent implements OnInit{
       },3000);
       return false;
     }
-
+    var reg = /<[^>]*>|<\/[^>]*>/gm;
+    var con=data.replace(reg,"");
+    var size=con.length;
+    console.log(size);
     if(sessionStorage.getItem("token"))
     {
 
       var token=sessionStorage.getItem("token");
-      var sub=JSON.stringify({name:"jianshu",token:token,artical:data,title:title,category:category});
+      var sub=JSON.stringify({name:"jianshu",size:size,token:token,artical:data,title:title,category:category});
       var that=this;
       this.getArtical.uploadArtical(sub)
         .subscribe(
