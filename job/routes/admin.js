@@ -51,7 +51,17 @@ var multiparty=require("multiparty");
                         hash.update(password);
                         var md=hash.digest("hex");
 
-                        var token=jwt.encode(telephone,"jianshu");
+                        //由于电话一样,故产生的token也一样
+                        //----------------------------
+                        var d = Math.random()*10;
+                        console.log(d);
+                        d=parseInt(d);
+                        console.log(d);
+                        var you=telephone+"."+d;
+                        console.log(you);
+                        var token=jwt.encode(you,"jianshu");
+                        console.log("登录的token："+token);
+                        //-------------------------
                         //console.log("mima:"+password);
                        // console.log(md);
 
@@ -135,7 +145,15 @@ var multiparty=require("multiparty");
                     {   //没注册
                         //console.log("2:"+result);
                         //insert into user(nickname,tele,password,created_at)
-                        var token=jwt.encode(tel,"jianshu");
+
+                        //---------------
+                        var d = Math.random()*10;
+                        console.log(d);
+                        d=parseInt(d);
+                        var you=tel+"."+d;
+                        //------------
+
+                        var token=jwt.encode(you,"jianshu");
                         //console.log(token);
                         var d = new Date();
                         var time = d.getFullYear() + "-" +(d.getMonth()+1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
@@ -149,6 +167,7 @@ var multiparty=require("multiparty");
                             {
                                 console.log("token");
                                 responseData.status=0;
+                                response.head="888888.jpg";
                                 responseData.token=token;
                                 res.json(responseData);
                                 conn.release();
@@ -183,6 +202,16 @@ var multiparty=require("multiparty");
                 var responseDate={};
                 if(err){console.log("数据库连接失败"+err);return false;}
                 var tel=jwt.decode(token,"jianshu");
+                console.log("tel:"+tel);
+
+                //--------------
+                    var arr=tel.split(".");
+                    tel=arr[0];
+                    console.log("解析出来的电话:"+tel);
+
+                //---------------
+
+
                 //console.log("jwt解密后的tel："+tel);
                 conn.query(sql.getToken,[tel],function(err,result){
                     if(err){console.log("查询语句出错:"+err);return false;}
@@ -224,6 +253,12 @@ var multiparty=require("multiparty");
         {
             var token=req.body.token;
             var tel=jwt.decode(token,"jianshu");
+
+            //-------------------------------
+                var arr=tel.split(".");
+                tel=arr[0];
+            //------------------------------
+
             console.log("解析出来的tel:"+tel);
             var pool=mysql.createPool(DBconfig.mysql);
             pool.getConnection(function(err,conn){
@@ -233,6 +268,7 @@ var multiparty=require("multiparty");
                     if(result)
                     {
                         console.log(JSON.stringify(result));
+                        console.log("退出成功");
                     }
                 });
                 conn.release();
@@ -252,6 +288,7 @@ var multiparty=require("multiparty");
             console.log(req.params.who);
             if(req.body.nickname && req.body.email && req.body.token)
             {
+                console.log(req.body.token);
                 var email=req.body.email.trim();
                 var nick=req.body.nickname.trim();
                 var token=req.body.token;
@@ -277,6 +314,7 @@ var multiparty=require("multiparty");
                     //进行异地登录判断  由token可得出tel
                     //可通过查看数据库中的token是否一致来判断是否是同一个人
                     var tel=jwt.decode(token,"jianshu");
+
                     conn.query(sql.getToken,[tel],function(err,result){
                         if(err){console.log("查询语句出错:"+err);return false;}
                         if(result[0])
@@ -296,6 +334,8 @@ var multiparty=require("multiparty");
                                     }
                                     else
                                     {
+                                        responseData.status=1;
+                                        res.json(responseData);
                                         console.log("插入失败");
                                     }
                                 });
@@ -308,6 +348,8 @@ var multiparty=require("multiparty");
                         }
                         else
                         {
+                            responseData.status=3;
+                            res.json(responseData);
                             console.log("该token不存在");
                         }
                         conn.release();
@@ -362,6 +404,12 @@ var multiparty=require("multiparty");
                 pool.getConnection(function(err,conn){
                     if(err){console.log("数据库连接失败:"+err); return false;}
                     var tel=jwt.decode(token,"jianshu");
+
+                    //-------------------------------
+                    var arr=tel.split(".");
+                    tel=arr[0];
+                    //------------------------------
+
                     conn.query(sql.getToken,[tel],function(err,result){
                         if(err){cosole.log("查询语句出错:"+err);return false;}
                         if(result[0])

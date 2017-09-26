@@ -99,6 +99,7 @@ export class AppComponent {
 
   ngAfterContentChecked(){
     this.hiddenNavs = Boolean(sessionStorage.getItem("token"));
+    this.personalHead=sessionStorage.getItem("head");
   }
   ngOnDestroy() {
 

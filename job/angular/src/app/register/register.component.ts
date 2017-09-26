@@ -140,6 +140,7 @@ export class RegisterComponent {
               case "0":
                 console.log("注册成功"+data.token);
                 sessionStorage.setItem("token",data.token);
+                sessionStorage.setItem("head",data.head);
                 that.route.navigate(['']);
                 break;
               case "6":

@@ -1,5 +1,36 @@
+<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+  <div class="container-fluid" style="width:94%">
 
-<div class="container">
+    <div class="top_container_left">
+      <a class="log">
+        <img src="../../assets/images/logo.png">
+      </a>
+    </div>
+    <div class="top_container_center">
+      <a class="top_index">
+        <img src="../../assets/images/nav.png" alt="" width="23px" height="23px">
+        <span>首页</span>
+      </a>
+      <div class="top_search">
+        <input class="top_search_text" type="text" placeholder="搜索">
+        <span><img src="../../assets/images/search.png" alt="" ></span>
+      </div>
+      <a class="top_login">登录</a>
+      <span class="top_letter"><img src="../../assets/images/Aa.png" alt=""></span>
+    </div>
+
+    <div class="top_container_right">
+      <a  class="top_register">注册</a>
+      <span class="top_write">
+        <img src="../../assets/images/write.png" alt="">
+        <span>写文章</span>
+      </span>
+    </div>
+
+  </div>
+
+</div>
+<div class="container" id="container">
   <div class="row">
     <div>
       <div class="main">
@@ -14,7 +45,7 @@
               <span class="tag">作者</span>
               <span class="name"><a href="#">燕子高飞</a></span>
               <a class="btn btn-r btn1">
-                <img src="../../assets/images/jiahao.png" alt="">
+                <img src="../../assets/images/加号.png" alt="">
                 <span>关注</span>
               </a>
               <div class="meta">
@@ -196,7 +227,19 @@
                 <a class="avatar">
                   <img src="//upload.jianshu.io/users/upload_avatars/7552504/33c3d676-5a87-4885-a15c-a409e72f5eae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/114/h/114">
                 </a>
-                <textarea placeholder="写下你的评论..."></textarea>
+                <textarea (click)="addShow()"  placeholder="写下你的评论..."></textarea>
+              <!--<div *ngIf="write" class="write-function-block">
+                  <div class="hint">Ctrl+Return 发表</div>
+                  <a class="btn btn-send">发送</a>
+                  <a class="cancel" (click)="funContentHidden()">取消</a>
+                </div>-->
+
+                <div [ngStyle]="writeContentHidden" class="write-function-block">
+                  <div class="hint">Ctrl+Return 发表</div>
+                  <a class="btn btn-send">发送</a>
+                  <a class="cancel" (click)="funContentHidden()">取消</a>
+                </div>
+
               </form>
             </div>
             <div class="normal-comment-list">
@@ -237,10 +280,10 @@
                           </a>
                           <a class="">
                             <img src="../../assets/images/回复%20(1).png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
                           <a class="report">
-                            <span>举报</span>
+                            <span (click)="reportShow()">举报</span>
                           </a>
                         </div>
                       </div>
@@ -257,9 +300,9 @@
                           <span>2017.09.21 13:47</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment">
@@ -271,16 +314,26 @@
                           <span>2017.09.22 21:32</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
-                      <div class="sub-comment more-comment">
+                      <div class="sub-comment more-comment" >
                         <a class="add-comment-btn">
                           <img src="../../assets/images/write1.png" alt="">
-                          <span>添加新评论</span>
+                          <span (click)="addShow()">添加新评论</span>
                         </a>
+                      </div>
+                      <div [ngStyle]="writeContentHidden">
+                        <form class="new-comment">
+                          <textarea placeholder="写下你的评论..."></textarea>
+                          <div class="write-function-block">
+                            <div class="hint">Ctrl+Return 发表</div>
+                            <a class="btn btn-send">发送</a>
+                            <a (click)="funContentHidden()" class="cancel">取消</a>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -311,10 +364,10 @@
                           </a>
                           <a class="">
                             <img src="../../assets/images/回复%20(1).png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
                           <a class="report">
-                            <span>举报</span>
+                            <span (click)="reportShow()">举报</span>
                           </a>
                         </div>
                       </div>
@@ -331,30 +384,40 @@
                           <span>2017.09.21 13:47</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment">
                         <p>
-                          <a href="#" target="_blank">Ameizeng</a>：
+                          <a href="#">Ameizeng</a>：
                           <span>妖妖魔法无边，你已经响彻我们1班了</span>
                         </p>
                         <div class="sub-tool-group">
                           <span>2017.09.22 21:32</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment more-comment">
                         <a class="add-comment-btn">
-                          <img src="../../assets/images/write.png" alt="">
-                          <span>添加新评论</span>
+                          <img src="../../assets/images/write1.png" alt="">
+                          <span (click)="addShow()">添加新评论</span>
                         </a>
+                      </div>
+                      <div [ngStyle]="writeContentHidden">
+                        <form class="new-comment">
+                          <textarea placeholder="写下你的评论..."></textarea>
+                          <div class="write-function-block">
+                            <div class="hint">Ctrl+Return 发表</div>
+                            <a class="btn btn-send">发送</a>
+                            <a (click)="funContentHidden()" class="cancel">取消</a>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -383,10 +446,10 @@
                           </a>
                           <a class="">
                             <img src="../../assets/images/回复%20(1).png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
                           <a class="report">
-                            <span>举报</span>
+                            <span (click)="reportShow()">举报</span>
                           </a>
                         </div>
                       </div>
@@ -403,30 +466,40 @@
                           <span>2017.09.21 13:47</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment">
                         <p>
-                          <a href="#" target="_blank">Ameizeng</a>：
+                          <a href="#">Ameizeng</a>：
                           <span>妖妖魔法无边，你已经响彻我们1班了</span>
                         </p>
                         <div class="sub-tool-group">
                           <span>2017.09.22 21:32</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
-                          <a class="report"><span>举报</span></a>
+                          <a class="report"><span (click)="reportShow()">举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment more-comment">
                         <a class="add-comment-btn">
-                          <img src="../../assets/images/write.png" alt="">
-                          <span>添加新评论</span>
+                          <img src="../../assets/images/write1.png" alt="">
+                          <span (click)="addShow()">添加新评论</span>
                         </a>
+                      </div>
+                      <div *ngIf="writeContentHidden">
+                        <form class="new-comment">
+                          <textarea placeholder="写下你的评论..."></textarea>
+                          <div class="write-function-block">
+                            <div class="hint">Ctrl+Return 发表</div>
+                            <a class="btn btn-send">发送</a>
+                            <a (click)="funContentHidden()" class="cancel">取消</a>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -457,7 +530,7 @@
                           </a>
                           <a class="">
                             <img src="../../assets/images/回复%20(1).png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow3()">回复</span>
                           </a>
                           <a class="report">
                             <span>举报</span>
@@ -477,7 +550,7 @@
                           <span>2017.09.21 13:47</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
                           <a class="report"><span>举报</span></a>
                         </div>
@@ -491,16 +564,26 @@
                           <span>2017.09.22 21:32</span>
                           <a class="">
                             <img src="../../assets/images/回复.png" alt="">
-                            <span>回复</span>
+                            <span (click)="addShow()">回复</span>
                           </a>
                           <a class="report"><span>举报</span></a>
                         </div>
                       </div>
                       <div class="sub-comment more-comment">
                         <a class="add-comment-btn">
-                          <img src="../../assets/images/write.png" alt="">
-                          <span>添加新评论</span>
+                          <img src="../../assets/images/write1.png" alt="">
+                          <span (click)="addShow3()">添加新评论</span>
                         </a>
+                      </div>
+                      <div *ngIf="write3">
+                        <form class="new-comment">
+                          <textarea placeholder="写下你的评论..."></textarea>
+                          <div class="write-function-block">
+                            <div class="hint">Ctrl+Return 发表</div>
+                            <a class="btn btn-send">发送</a>
+                            <a class="cancel">取消</a>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -512,8 +595,8 @@
       </div>
       <div class="side-tool">
         <ul>
-          <li title="回到顶部">
-            <a class="function-button">
+          <li title="回到顶部" id="to-top">
+            <a href="#container" class="function-button">
               <img src="../../assets/images/arrow1.png" alt="">
             </a>
           </li>
@@ -571,3 +654,33 @@
     </div>
   </div>
 </div>
+
+<!--举报弹框-->
+<div class="cover1"  [ngStyle]="report">
+  <div class="cover1-main" style="width:35%;margin:0 auto;position: fixed;top:15%;left:35%;z-index:12;">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button (click)="cover1Show()"  type="button" class="close">×</button>
+        <h4 class="cover1-title">举报评论</h4>
+      </div>
+      <div class="panel-body">
+        <form>
+          <input type="radio" name="report" value="ad">
+          <span>广告及垃圾信息</span>
+          <input type="radio" name="report" value="plagiarism">
+          <span>抄袭或未授权转载</span>
+          <input type="radio" name="report" value="other">
+          <span>其它</span>
+          <textarea placeholder="写下举报的详情情况（选填）" class="form-control"></textarea>
+        </form>
+      </div>
+      <div class="panel-footer">
+        <div class="action">
+          <a (click)="cover1Show()">取消</a>
+          <input type="submit" class="btn btn1" value="提交">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,7 +1,38 @@
+<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+  <div class="container-fluid" style="width:94%">
 
+    <div class="top_container_left">
+      <a class="log">
+        <img src="../../assets/images/logo.png">
+      </a>
+    </div>
+    <div class="top_container_center">
+      <a class="top_index">
+        <img src="../../assets/images/nav.png" alt="" width="23px" height="23px">
+        <span>首页</span>
+      </a>
+      <div class="top_search">
+        <input class="top_search_text" type="text" placeholder="搜索">
+        <span><img src="../../assets/images/search.png" alt="" ></span>
+      </div>
+      <a class="top_login">登录</a>
+      <span class="top_letter"><img src="../../assets/images/Aa.png" alt=""></span>
+    </div>
 
+    <div class="top_container_right">
+      <a  class="top_register">注册</a>
+      <span class="top_write">
+        <img src="../../assets/images/write.png" alt="">
+        <span>写文章</span>
+      </span>
+    </div>
+
+    <!--</div>-->
+
+  </div>
+
+</div>
 <div class="container">
-  <div class="nav"></div>
   <div class="row">
     <div class="main col-xs-12 col-sm-7">
       <div class="main-top">
@@ -18,244 +49,232 @@
       </div>
     </div>
       <ul class="main-middle">
-        <li class="active"><a href="#"><img src="../../assets/images/pinglun.png" alt=""> 最新评论</a></li>
-        <li class=""><a href="#"><img src="../../assets/images/mulu.png" alt="">最新收录</a></li>
-        <li class=""><a href="#"><img src="../../assets/images/fire.png" alt=""> 热门</a></li></ul>
-      <div class="main-bottom">
+        <li [ngClass]="{'main-middle_show':commentCategary}"  (click)="categaryShow('comment')" ><a href="#"><img src="../../assets/images/pinglun.png" alt=""> 最新评论</a></li>
+        <li [ngClass]="{'main-middle_show':newCategary}" (click)="categaryShow('new')" class=""><a href="#"><img src="../../assets/images/mulu.png" alt="">最新收录</a></li>
+        <li [ngClass]="{'main-middle_show':hotCategary}" (click)="categaryShow('hot')" class=""><a href="#"><img src="../../assets/images/fire.png" alt=""> 热门</a></li>
+      </ul>
+      <div class="main-introduce">
+        <div *ngIf="commentCategary">
+          <div class="introduce">
+            <!--需要渲染的部分-->
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
 
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
+
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
+        <div *ngIf="newCategary">
+          <div class="introduce">
+            <!--需要渲染的部分-->
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
 
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
+
+
           </div>
         </div>
+        <div *ngIf="hotCategary">
+          <div class="introduce">
+            <!--需要渲染的部分-->
+            <div class="author">
+              <a>
+                <span><img src="../../assets/images/category-1.png" alt=""></span>
+                <span class="author_name">达芬奇</span>
+                <small>09.09&nbsp;13:27</small>
+              </a>
+              <div class="author_title">
+                <a href="" >那个荷兰男人的眼里有火</a>
+              </div>
+              <p class="author_content">
+                这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
+                Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
+                的爱情是流光溢彩的霓虹灯和...
+              </p>
+              <div class="meta">
+                <a href="" class="meta_theme">
+                  生活经验
+                </a>
+                <a href="">
+                  <img  src="../../assets/images/eye.png" alt="">
+                  424
+                </a>
+                <a href="">
+                  <img src="../../assets/images/response.png" alt="">
+                  43432
+                </a>
+                <a>
+                  <img class="meta_ico" src="../../assets/images/heart.png" alt="">
+                  1233
+                </a>
+              </div>
+            </div>
 
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
+
           </div>
         </div>
-
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
-          </div>
-        </div>
-
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
-          </div>
-        </div>
-
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
-          </div>
-        </div>
-
-        <div class="author">
-          <a>
-            <span><img src="../../assets/images/category-1.png" alt=""></span>
-            <span class="author_name">达芬奇</span>
-            <small>09.09&nbsp;13:27</small>
-          </a>
-          <div class="author_title">
-            <a href="" >那个荷兰男人的眼里有火</a>
-          </div>
-          <p class="author_content">
-            这是简书第一个征集「情书」的专题。 每一个爱好文字的人，都应该有过为另一个
-            Ta提笔写情书的冲动。或许你的爱情是单车上穿着白衬衫和连衣裙的你我，或许你
-            的爱情是流光溢彩的霓虹灯和...
-          </p>
-          <div class="meta">
-            <a href="" class="meta_theme">
-              生活经验
-            </a>
-            <a href="">
-              <img  src="../../assets/images/eye.png" alt="">
-              424
-            </a>
-            <a href="">
-              <img src="../../assets/images/response.png" alt="">
-              43432
-            </a>
-            <a>
-              <img class="meta_ico" src="../../assets/images/heart.png" alt="">
-              1233
-            </a>
-          </div>
-        </div>
-
+      </div>
+      <div class="load_more">
+        阅读更多
       </div>
     </div>
+
     <div class="aside col-xs-12 col-sm-4 col-sm-offset-1">
       <p class="title">专题公告</p>
       <div class="aside-top">
@@ -267,12 +286,14 @@
         <p>简书青春专题主编每周会挑选一名优秀作者提供一份出版作品的机会~</p>
 
         <p>关注简书官方微信公众号（ jianshuio ），及时阅读简书热门好...</p>
-        <a class="open" href="#">
-          展开描述 <img src="../../assets/images/jiantouxia.png" alt="">
-        </a>
-        <!--<a class="colse" href="#">-->
-          <!--收起描述 <img src="../../assets/imajiantoushang.png.png" alt="">-->
-        <!--</a>-->
+        <span class="open" (click)="openShow()">
+          <p [ngStyle]="close">展开描述 <img src="../../assets/images/jiantouxia.png" alt=""></p>
+        </span>
+        <span class="colse" [ngStyle]="open_close">
+          <p style="color: #333">微信关注公众号 “简宝玉” （jianshubaoyu），进入简书丰富多彩的专题社群！</p>
+          <span (click)="closeShow()">收起描述 <img src="../../assets/images/jiantoushang.png" alt=""></span>
+          <!--收起描述 <img src="../../assets/images/jiantoushang.png" alt="">-->
+        </span>
       </div>
       <div class="share">
         <span>分享到</span>
@@ -300,7 +321,20 @@
             <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/5108755/91cb7cd7-af0f-4a7d-8c24-6364824e7ac4.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">王清华</a></li>
             <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/5737199/63d73ee6-1e5a-48af-a3e5-ad504a39199d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">时光欢</a></li>
             <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/6070115/6278ed95-405d-4832-9e23-6ea4d32bad0a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">飒飒秋风爽why</a></li>
-            <li><a class="check-more" href="#">展开 <img src="../../assets/images/jiantouxia.png" alt=""></a></li>
+            <li class="open" (click)="openShow()">
+              <p [ngStyle]="close" class="check-more">展开更多 <img src="../../assets/images/jiantouxia.png" alt=""></p>
+            </li>
+            <li class="colse" [ngStyle]="open_close">
+              <ul style="list-style: none;padding-left: 0">
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/2292871/6c934a05fe91?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">懒癌先生_</a></li>
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/3676004/34f2e898-91bd-4907-85af-a9911f732069.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">酿酒仙官</a></li>
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/3245829/cf9df087-d1f4-46c6-8054-d8e88cf7d6fd.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">曼珠沙花</a></li>
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/5108755/91cb7cd7-af0f-4a7d-8c24-6364824e7ac4.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">王清华</a></li>
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/5737199/63d73ee6-1e5a-48af-a3e5-ad504a39199d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">时光欢</a></li>
+                <li><a href="#" target="_blank" class="avatar"><img src="//upload.jianshu.io/users/upload_avatars/6070115/6278ed95-405d-4832-9e23-6ea4d32bad0a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"></a> <a href="#" class="name">飒飒秋风爽why</a></li>
+              </ul>
+              <span (click)="closeShow()">收起<img src="../../assets/images/jiantoushang.png" alt=""></span>
+            </li>
           </ul>
         </div>
         <div>
@@ -316,14 +350,12 @@
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5673137/a462c6f9-0a00-4206-a34d-e5533b15b2c7.jpg"title="追风筝的哈桑"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/1774019/7db360fe-2ed1-4c58-bcd0-9a4ae2e5d616.jpg"title="张拉灯"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/3364033/f0c77fa4-9cee-4f52-a4e2-8f488ffc1f06.jpg"title="云晞"></a></li>
-            <a class="function-btn" href="#"><img src="../../assets/images/shengluehao.png" alt=""></a>
+            <li (click)="listShow1()" class="function-btn"><span><img src="../../assets/images/shengluehao.png" alt=""></span></li>
           </ul>
         </div>
         <div>
           <div class="title">关注的人(1150351)</div>
           <ul class="list listm">
-
-            <!--<li><a href="#" class="avatar"><img src="http://cdn2.jianshu.io/assets/default_avatar/7-0993d41a595d6ab6ef17b19496eb2f21.jpg" title="子李不吃李子 · 几秒前 关注"></a></li>-->
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911790/b2c50e12-0b94-4beb-a3c9-fb246612bb9a?imageMogr/thumbnail/90x90/quality/100" title="心如止水_772f · 几秒前 关注"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911770/4a9cd866-95f8-438f-ad0a-85747443fcc3.jpg?imageMogr/thumbnail/90x90/quality/100" title="一个爱笑的有志青年 · 1分钟前 关注"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911760/f2432d86-f1be-4c18-9ce5-d3691aa0128f?imageMogr/thumbnail/90x90/quality/100" title="横竖一笔 · 2分钟前 关注"></a></li>
@@ -331,11 +363,184 @@
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911728/73dcb2ed-3ee6-4327-bfce-70665c2d0602.jpg?imageMogr/thumbnail/90x90/quality/100" title="午日xc · 3分钟前 关注"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911747/5b90aca6-9c0b-483c-80c8-c69da4533bdd?imageMogr/thumbnail/90x90/quality/100" title="叫什么好呢88 · 3分钟前 关注"></a></li>
             <li><a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/7911736/0de4c7d7-fa9b-41cf-923a-736944ac2ad9?imageMogr/thumbnail/90x90/quality/100" title="如此而已_13c7 · 4分钟前 关注"></a></li>
-            <a class="function-btn" href="#"><img src="../../assets/images/shengluehao.png" alt=""></a>
+            <li  (click)="listShow2()" class="function-btn"><span><img src="../../assets/images/shengluehao.png" alt=""></span></li>
           </ul>
         </div>
       </div>
     </div>
-    <div></div>
+    <div class="side-tool" id="to_top" title="回到顶部">
+      <img src="../../assets/images/arrow.png" alt="">
+    </div>
   </div>
 </div>
+
+<!--弹框-->
+<div class="cover1"  [ngStyle]="deleteHidden">
+  <div class="cover1-main" style="width:45%;margin:0 auto;position: fixed;top:15%;left:25%;z-index:12;">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button (click)="cover1Show()"  type="button" class="close">×</button>
+        <h4 class="cover1-title">推荐作者(100)</h4>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar"><img src="http://upload.jianshu.io/users/upload_avatars/5479122/9201a33e-d57d-4347-bfd4-7d3758bcab47.jpg"></a>
+          <div class="info">
+            <a href="#" class="name">似舞</a>
+            <div class="profile">写了161.2k字 · 2.5k喜欢</div>
+          </div>
+          <a class="btn btn-r btn1">
+            <img src="../../assets/images/加号.png" alt="">
+            <span>关注</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="cover2"  [ngStyle]="deleteHidden2">
+  <div class="cover2-main" style="width:45%;margin:0 auto;position: fixed;top:15%;left:25%;z-index:12;">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button"  (click)="cover2Show()" class="close">×</button>
+        <h4 class="cover1-title">关注的人(1190763)</h4>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+        <li class="list-group-item">
+        <a href="#" class="avatar">
+          <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+        </a>
+        <a href="#" class="name">天空会掉色</a>
+        <span class="follow-time">1小时前 关注</span>
+      </li>
+        <li class="list-group-item">
+          <a href="#" class="avatar">
+            <img src="http://upload.jianshu.io/users/upload_avatars/8075607/cb9e1f97-880c-4e55-837d-641c1ece5bdf?imageMogr/thumbnail/90x90/quality/100">
+          </a>
+          <a href="#" class="name">天空会掉色</a>
+          <span class="follow-time">1小时前 关注</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

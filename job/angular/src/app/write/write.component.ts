@@ -49,12 +49,18 @@ export class WriteComponent implements OnInit{
     {
       console.log(title.length);
       console.log("标题格式错误");
+      this.callbackContent="标题格式错误";
+      this.resultHidden=true;
+      var that=this;
+      setTimeout(function(){
+        that.resultHidden=false;
+      },3000);
       return false;
     }
     var reg=/^\d{1,2}$/;
     if(!reg.test(category))
     {
-      console.log("内容别错误");
+      console.log("内容类别错误");
       return false;
     }
     console.log(data);
@@ -62,6 +68,12 @@ export class WriteComponent implements OnInit{
     if(data.length>30000 || data=="<p><br></p>")
     {
       console.log("内容太长");
+      this.callbackContent="内容格式错误";
+      this.resultHidden=true;
+      var that=this;
+      setTimeout(function(){
+        that.resultHidden=false;
+      },3000);
       return false;
     }
 
@@ -106,9 +118,10 @@ export class WriteComponent implements OnInit{
     else
     {
       console.log("请先登录");
+      this.callbackContent="请先登录";
       this.resultHidden=true;
       setTimeout(function(){
-        this.resultHidden=true;
+        this.resultHidden=false;
       },3000);
     }
 

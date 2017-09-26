@@ -71,7 +71,7 @@ router.post("/category/:cate",function(req,res){
 });
 
 router.post("/uploadartical",function(req,res){
-    console.log(JSON.stringify(req.body));
+    //console.log(JSON.stringify(req.body));
     console.log("进入到保存文章");
     var responseDate={};
     // console.log(req.body);
@@ -103,9 +103,16 @@ router.post("/uploadartical",function(req,res){
         pool.getConnection(function(err,conn){
             if(err){console.log("数据库连接失败:"+err);return false;}
 
+
             var tel=jwt.decode(token,"jianshu");
+            console.log(tel);
+            var arr=tel.split(".");
+            tel=arr[0];
+            console.log("解析出来的号码为:"+tel);
             conn.query(sql.getToken,[tel],function(err,result){
                 if(err){console.log("查询语句连接出错:"+err);return false;}
+                console.log("结果为:"+JSON.stringify(result));
+                if(result.length<=0) return false;
                 if(result[0].token)
                 {
                     if(result[0].token==token)
@@ -143,6 +150,7 @@ router.post("/uploadartical",function(req,res){
                     console.log(JSON.stringify(result));
                     res.json({"a":JSON.stringify(result)});
                 }
+
             });
         })
     }

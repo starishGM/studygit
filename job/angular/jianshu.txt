@@ -34,6 +34,7 @@
     0：代表成功
     1:代表性别错误
     2:代表
+    3:保存失败
 
   --上传图片
   0:代表上传成功
@@ -68,6 +69,7 @@
   12)视图切换之后再切回来需要重新请求数据吗?
   13)category=req.body.category.trim();当req.body.category是一个数字的时候不然使用trim函数。
   14)并不是所有的文章都可以提交，应该再加一个临时文张表共管理员审阅文章，通过之后再插入到数据库。
+  15)//由于电话一样,故产生的token也一样
 记录:
     1)localStorage:存用户的token用以下次登录
     2)sessionStorage:用于判断用户的登录状态
@@ -89,3 +91,6 @@
 获取当前时间:
    var d = new Date();
    var time = d.getFullYear() + "-" +(d.getMonth()+1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+正则:
+  1)var reg = /<[^>]*>|<\/[^>]*>/gm;//替换所有html标签

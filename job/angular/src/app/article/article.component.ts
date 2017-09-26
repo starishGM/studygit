@@ -30,9 +30,54 @@ export class ArticleComponent implements OnInit {
         break;
     }
   }
+
+  //点击评论、添加新评论、回复弹出
+  writeContentHidden;//评论的显示与隐藏
+
+  // write:boolean=false;
+  write2:boolean=false;
+  write22:boolean=false;
+  write3:boolean=false;
+  addShow(){
+    //this.write=true;
+    this.writeContentHidden={display:'block'};
+
+  }
+
+  addShow2(){
+    this.write2=true;
+  }
+  addShow22(){
+    this.write22=true;
+  }
+  addShow3(){
+    this.write2=true;
+  }
+  //点击取消隐藏
+  funContentHidden()
+  {
+    this.writeContentHidden={display:'none'};
+    // console.log("a");
+  }
+
+
+  //举报弹框
+  //点击x 或取消关闭
+  report;
+  cover1Show(){
+    this.report={display:'none'};
+  }
+  //点击弹出
+
+  reportShow(){
+    this.report={display:'block'};
+  }
+
+
   constructor() { }
 
   ngOnInit() {
+    this.writeContentHidden={display:'none'};
   }
 
 }
