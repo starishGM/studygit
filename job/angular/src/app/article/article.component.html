@@ -1,4 +1,4 @@
-<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
+<!--<div class="nav navbar-fixed-top top_header" style="background-color:#ffffff;border:1px solid #dddddd">
   <div class="container-fluid" style="width:94%">
 
     <div class="top_container_left">
@@ -29,44 +29,45 @@
 
   </div>
 
-</div>
-<div class="container" id="container">
+</div>-->
+
+<div class="container" id="container" *ngFor="let x of articalContent">
   <div class="row">
     <div>
       <div class="main">
         <div class="article">
-          <h1 class="title">朋友，就是那个能让你越变越好的人</h1>
+          <h2 class="title">{{x.title}}</h2>
 
           <div class="author">
             <a class="avatar" href="#">
-              <img src="//upload.jianshu.io/users/upload_avatars/5057483/8b55b7f8-b62d-43d8-be34-f67d70eb6a51.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96">
+              <img src="../../assets/upfile/{{x.head}}" alt="96">
             </a>
             <div class="info">
               <span class="tag">作者</span>
-              <span class="name"><a href="#">燕子高飞</a></span>
-              <a class="btn btn-r btn1">
+              <span class="name"><a href="#">{{x.nickname}}</a></span>
+              <a class="btn btn-r btn1" >
                 <img src="../../assets/images/加号.png" alt="">
-                <span>关注</span>
+                <span style="padding:0 4px; text-align: center">关注</span>
               </a>
               <div class="meta">
-                <span class="publish-time" title="">2017.09.21 01:05*</span>
-                <span class="wordage">字数 2204</span>
+                <span class="publish-time" title="">{{x.time}}*</span>
+                <span class="wordage">字数 {{x.size}}</span>
                 <span class="views-count">阅读 423</span>
-                <span class="comments-count">评论 29</span>
-                <span class="likes-count">喜欢 41</span>
-                <span class="rewards-count ">赞赏 7</span>
+                <span class="comments-count">评论 {{x.com_num}}</span>
+                <span class="likes-count">喜欢 {{x.lik_num}}</span>
+                <!--<span class="rewards-count ">赞赏 7</span>-->
               </div>
             </div>
           </div>
 
-          <div class="show-content">
-            <div class="image-package">
+          <div class="show-content" [innerHTML]="x.content" id="show-content">
+<!--            <div class="image-package">
               <img src="//upload-images.jianshu.io/upload_images/5057483-702713bcf7e58c93.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" style="cursor: zoom-in;">
               <br>
               <div class="image-caption">图片发自简书App</div>
             </div>
-            <p><br></p>
-            <blockquote><b>01，为什么有些人的人生看起来毫不费力，却像开挂了一样？</b></blockquote>
+            <p><br></p>-->
+<!--            <blockquote><b>01，为什么有些人的人生看起来毫不费力，却像开挂了一样？</b></blockquote>
             <p>这个问题很多次在众人心头撞出波澜。特别想知道，当一个人突然疯狂迷恋上奋斗后，类似开挂，会不会突然来到另一个境界呢？”﻿<br></p>
             <p> ﻿其实答案大家都知道吧：会啊，如果开了挂，奋斗的投入感和成果的激励感形成正循环，必定会体验到自我满足和生活充实的另一个境界。</p>
             <p>大约一个月左右吧，无意中在简书上看到一篇文章《我在网上买了一只哈士奇》，这新颖而奇特的晨读感悟的写法让我关注上了这个作者林妖妖。我被她完全不一样的写作风格吸引进了她的简书文里。</p>
@@ -80,8 +81,9 @@
               <br>
               <div class="image-caption">图片发自简书App</div>
             </div>
-            <br>
-            <blockquote>
+            <br>-->
+
+            <!--<blockquote>
               <b>02、所谓君子择友而交，良禽择木而栖。</b>
               <b>说的就是身边多结交正能量的人，才能越变越好，因为这样的人是良师益友，是榜样。﻿﻿</b>
             </blockquote>
@@ -129,7 +131,8 @@
               <br>
               <div class="image-caption">图片发自简书App</div>
             </div>
-            <p>坚持写身边的小故事，坚持做自已，这种感觉真好！</p>
+            <p>坚持写身边的小故事，坚持做自已，这种感觉真好！</p>-->
+
           </div>
 
           <div class="show-foot">
@@ -145,24 +148,26 @@
             </div>
           </div>
         </div>
-        <div class="article-info">
+
+        <div class="article-info" *ngFor="let info of authorInfo">
           <div class="info">
             <a class="avatar" href="#">
-              <img src="//upload.jianshu.io/users/upload_avatars/5057483/8b55b7f8-b62d-43d8-be34-f67d70eb6a51.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96">
+              <img src="../../assets/upfile/{{x.head}}" alt="96">
             </a>
             <a class="btn btn-r btn1">
               <img src="../../assets/images/加号.png" alt="">
               <span>关注</span>
             </a>
-            <a class="title" href="#">燕子高飞</a>
-            <p>写了 95131 字，被 196 人关注，获得了 507 个喜欢</p></div>
+            <a class="title" href="#">{{x.nickname}}</a>
+            <p>写了{{info.size}} 字，被{{info.fans}}人关注，获得了 {{info.lik_num}} 个喜欢</p></div>
           <div class="signature">
-            我心柔软，但有力量。我是爱讲故事的燕子姐姐，养花，养狗，理财，手工，喜欢从生活小事中引起思考，感受身边的小确幸，爱看书爱写文。愿得一颗柔软心。
+            {{info.introduce | filter:60}}
           </div>
         </div>
+
         <div class="support-author">
           <p>我有故事，也有茶，欢迎你来我家坐，聊聊天，喝喝茶，一起品味人生！</p>
-          <div class="btn btn-pay">赞赏支持</div>
+          <!--<div class="btn btn-pay">赞赏支持</div>
           <div class="supporter">
             <ul class="support-list">
               <li>
@@ -191,7 +196,7 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div>-->
         </div>
         <div class="meta-bottom">
           <div class="like">
@@ -200,7 +205,7 @@
                 <a class="btn btn-r btn1">
                   <img src="../../assets/images/xin.png" alt="">
                   <span>喜欢</span>
-                  <a class="num">53</a>
+                  <a class="num">{{x.lik_num}}</a>
                 </a>
               </div>
             </div>
@@ -227,7 +232,7 @@
                 <a class="avatar">
                   <img src="//upload.jianshu.io/users/upload_avatars/7552504/33c3d676-5a87-4885-a15c-a409e72f5eae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/114/h/114">
                 </a>
-                <textarea (click)="addShow()"  placeholder="写下你的评论..."></textarea>
+                <textarea (click)="addShow()" #CommentRef placeholder="写下你的评论..."></textarea>
               <!--<div *ngIf="write" class="write-function-block">
                   <div class="hint">Ctrl+Return 发表</div>
                   <a class="btn btn-send">发送</a>
@@ -236,7 +241,7 @@
 
                 <div [ngStyle]="writeContentHidden" class="write-function-block">
                   <div class="hint">Ctrl+Return 发表</div>
-                  <a class="btn btn-send">发送</a>
+                  <a class="btn btn-send" (click)="funSendComment(CommentRef.value)">发送</a>
                   <a class="cancel" (click)="funContentHidden()">取消</a>
                 </div>
 

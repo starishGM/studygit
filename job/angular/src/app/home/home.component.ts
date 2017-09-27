@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
         }
       );
 
-    /*
+
     var data3=JSON.stringify({name:"jianshu",page:5});
     this.artical.getRecommendAuthor(data3)
       .subscribe(
@@ -101,6 +101,6 @@ export class HomeComponent implements OnInit {
             }
         }
       )
-    */
+
   }
 }

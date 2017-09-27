@@ -37,5 +37,26 @@ export class GetArticalService{
       .map(res=>res.json());
   }
 
+  //获取单个文章的信息
+  getSingleArtical(data){
+    var headers=new Headers({"Content-Type":"application/json"});
+    return this.http.post(this.url+"/home/getSingleArtical",data,{headers:headers})
+      .map(res=>res.json());
+  }
+  //发送评论
+  sendComment(data){
+    var headers=new Headers({"Content-Type":"application/json"});
+    return this.http.post(this.url+"/home/sendComment",data,{headers:headers})
+      .map(res=>res.json());
+  }
+
+  //获取每篇文章的作者详细信息
+
+  getSingleAuthorInfo(data){
+    var headers=new Headers({"Content-Type":"application/json"});
+    return this.http.post(this.url+"/home/getSingleAuthorInfo",data,{headers:headers})
+      .map(res=>res.json());
+  }
+
 }
 
