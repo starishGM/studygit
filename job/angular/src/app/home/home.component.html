@@ -175,10 +175,10 @@
             <small>{{x.time}}</small>
           </a>
           <div class="author_title">
-            <a [routerLink]="['artical']" >{{x.title}}</a>
+            <a [routerLink]="['artical',x.blog_id]" >{{x.title}}</a>
           </div>
           <p class="author_content">
-           {{x.content | filter}}
+           {{x.content | filter:266}}
           </p>
           <div class="meta">
             <a href="" class="meta_theme">
@@ -205,7 +205,7 @@
 
       </style>
 
-      <div class="load_more">
+      <div class="load_more" (click)="funGetMore()">
         阅读更多
       </div>
       <div class="footer">
@@ -232,7 +232,7 @@
           </span>
         </p>
         <ul class="recommend_content">
-          <li>
+<!--          <li>
             <span class="recommend_img">
               <img src="../../assets/images/recommend.jpg" alt="">
             </span>
@@ -243,45 +243,21 @@
               </p>
               <small>写了20.3千字</small>
             </div>
-          </li>
-          <li>
+          </li>-->
+          <li *ngFor="let x of recommendAuthor">
             <span class="recommend_img">
-              <img src="../../assets/images/recommend.jpg" alt="">
+              <img src="../../assets/upfile/{{x.head}}" alt="">
             </span>
             <div class="recommend_notice">
               <p>
-                考拉熊
+                {{x.nickname}}
                 <span><img src="../../assets/images/puls.png" alt="">关注</span>
               </p>
-              <small>写了20.3千字</small>
-            </div>
-          </li>
-          <li>
-            <span class="recommend_img">
-              <img src="../../assets/images/recommend.jpg" alt="">
-            </span>
-            <div class="recommend_notice">
-              <p>
-                考拉熊
-                <span><img src="../../assets/images/puls.png" alt="">关注</span>
-              </p>
-              <small>写了20.3千字</small>
-            </div>
-          </li>
-          <li>
-            <span class="recommend_img">
-              <img src="../../assets/images/recommend.jpg" alt="">
-            </span>
-            <div class="recommend_notice">
-              <p>
-                考拉熊
-                <span><img src="../../assets/images/puls.png" alt="">关注</span>
-              </p>
-              <small>写了20.3千字</small>
+              <small>写了{{x.size}}千字·{{x.sum_like}}人喜欢</small>
             </div>
           </li>
         </ul>
-        <button type="button" class="recommend_all">查看全部&nbsp;></button>
+        <button type="button"  class="recommend_all">查看全部&nbsp;></button>
       </div>
     </div>
     <style>

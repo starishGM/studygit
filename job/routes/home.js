@@ -163,13 +163,14 @@ router.post("/uploadartical",function(req,res){
 
 router.post("/getArticalDetail",function(req,res){
     console.log("进入到getArticaldetail页面");
-    if(req.body.name=="jianshu")
+    if(req.body.name=="jianshu" && req.body.page)
     {
         var responseDate={};
+        var page=req.body.page;
         var pool=mysql.createPool(DBconfig.mysql);
         pool.getConnection(function(err,conn){
             if(err){console.log("数据库连接失败:"+err);return false;}
-            conn.query(sql.getArticalDetail,function(err,result){
+            conn.query(sql.getArticalDetail,[page],function(err,result){
                 console.log("artical");
                 if(err){console.log("数据库查询语句出错:"+err); return false;}
                 if(result[0])
@@ -191,4 +192,29 @@ router.post("/getArticalDetail",function(req,res){
     }
 });
 
+router.post("/getRecommendAuthor",function(req,res){
+    var responseDate={};
+   if(req.body.name=="jianshu" && req.body.page)
+   {
+       console.log("进入到getRecommendAuthor");
+       var page=req.body.page;
+       var pool=mysql.createPool(DBconfig.mysql);
+       pool.getConnection(function(err,conn){
+           if(err){console.log("数据库连接失败:"+err);return false;}
+           conn.query(sql.recommendAuthor,[page],function(err,result){
+               if(err){console.log("查询语句出错:"+err); return false;}
+               if(result[0])
+               {
+                   responseDate.status=0;
+                   responseDate.code=result;
+                   console.log(JSON.stringify(result));
+               }
+               else{
+                   responseDate.status=1;//没获取到数据
+               }
+               res.json(responseDate);
+           });
+       })
+   }
+});
 module.exports=router;

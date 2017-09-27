@@ -390,9 +390,14 @@ body{
   background-color: #f7f7f7;
 }
 .recommend_content{
+  margin-top:10px;
   list-style: none;
   padding:0;
 }
+.recommend_content >li{
+ margin-bottom:15px;
+}
+
 .recommend_notice{
   display:inline-block;
   width:77%;
@@ -435,6 +440,7 @@ body{
 }
 .recommend_menu{
   color:#969696;
+  margin-top:15px;
 }
 .recommend_menu span{
   float: right;

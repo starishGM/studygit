@@ -5,10 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(content: any, args?: any): any {
+  transform(content: any, length: any): any {
     var reg = /<[^>]*>|<\/[^>]*>/gm;
     content=content.replace(reg,"");
-    return content.slice(0,266)+"...";
+    return content.slice(0,length)+"...";
   }
 
 }

@@ -66,7 +66,7 @@ const  appRoute: Routes = [
     component:ConcrenmenuComponent
   },
   {
-    path:"artical",
+    path:"artical/:id",
     component:ArticleComponent
   },
   {

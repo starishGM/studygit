@@ -30,5 +30,12 @@ export class GetArticalService{
       .map(res=>res.json());
   }
 
+  //获取推荐作者
+  getRecommendAuthor(data){
+    var headers=new Headers({"Content-Type":"application/json"});
+    return this.http.post(this.url+"/home/getRecommendAuthor",data,{headers:headers})
+      .map(res=>res.json());
+  }
+
 }
 

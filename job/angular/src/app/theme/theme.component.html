@@ -7,7 +7,6 @@
 <div id="div1" class="a" style="margin-top:38px;">
   <ul style="border-bottom:1px solid #ddd;font-size:17px; font-weight:600;">
     <li class="active">推荐</li>
-    <li>热门</li>
  <!--   <li>城市</li>-->
   </ul>
   <div class="class" style="display:block;">
@@ -17,7 +16,7 @@
       <div class="shang">
       </div>
       <h2>{{x.categoryname}}</h2>
-      <p class="p2">{{x.introduce}}</p>
+      <p class="p2">{{x.introduce | filter:30}}</p>
       <input type="button" value="+关注">
       <br/>
       <hr color="#eaeaea">

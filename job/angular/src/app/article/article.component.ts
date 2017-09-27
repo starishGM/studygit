@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute, ParamMap} from '@angular/router'
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+
+  articalId:number;//文章的id
 
   likeComment:boolean=true;
   ascComment:boolean=false;
@@ -74,9 +76,16 @@ export class ArticleComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(
+    private route:ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.articalId=parseInt(this.route.snapshot.paramMap.get('id'));
+    console.log(this.articalId);
+
+    //然后根据articalId查询关于文章的一些相关信息
+
     this.writeContentHidden={display:'none'};
   }
 
